@@ -1,0 +1,1267 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20252.25.0818.1050                               -->
+<workbook original-version='18.1' source-build='2025.2.2 (20252.25.0818.1050)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='weather_dirty+' inline='true' name='federated.0wa6tc21mi859z1ds8p000rnnie9' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='weather_dirty' name='textscan.19nk72i0pnw1aw1bnkz3313uh52d'>
+            <connection class='textscan' directory='E:/Mykola&apos;s stuff/Other/Tableau/Weather 365' filename='weather_dirty.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation type='collection'>
+          <relation connection='textscan.19nk72i0pnw1aw1bnkz3313uh52d' name='weather_dirty.csv' table='[weather_dirty#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_GB' separator=';'>
+              <column datatype='date' name='Date' ordinal='0' />
+              <column datatype='integer' name='Temperature_day' ordinal='1' />
+              <column datatype='integer' name='Temperature_night' ordinal='2' />
+              <column datatype='integer' name='AirPressure_hPa' ordinal='3' />
+              <column datatype='integer' name='WindSpeed_km/h' ordinal='4' />
+              <column datatype='string' name='Wind_direction' ordinal='5' />
+              <column datatype='integer' name='Precipitation_mm' ordinal='6' />
+              <column datatype='string' name='Outlook' ordinal='7' />
+              <column datatype='string' name='F9' ordinal='8' />
+              <column datatype='string' name='F10' ordinal='9' />
+              <column datatype='string' name='F11' ordinal='10' />
+            </columns>
+          </relation>
+          <relation connection='textscan.19nk72i0pnw1aw1bnkz3313uh52d' name='weather_dirty.csv1' table='[weather_dirty#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_GB' separator=';'>
+              <column datatype='date' name='Date' ordinal='0' />
+              <column datatype='integer' name='Temperature_day' ordinal='1' />
+              <column datatype='integer' name='Temperature_night' ordinal='2' />
+              <column datatype='integer' name='AirPressure_hPa' ordinal='3' />
+              <column datatype='integer' name='WindSpeed_km/h' ordinal='4' />
+              <column datatype='string' name='Wind_direction' ordinal='5' />
+              <column datatype='integer' name='Precipitation_mm' ordinal='6' />
+              <column datatype='string' name='Outlook' ordinal='7' />
+              <column datatype='string' name='F9' ordinal='8' />
+              <column datatype='string' name='F10' ordinal='9' />
+              <column datatype='string' name='F11' ordinal='10' />
+            </columns>
+          </relation>
+        </relation>
+        <cols>
+          <map key='[AirPressure_hPa (weather_dirty.csv1)]' value='[weather_dirty.csv1].[AirPressure_hPa]' />
+          <map key='[AirPressure_hPa]' value='[weather_dirty.csv].[AirPressure_hPa]' />
+          <map key='[Date (weather_dirty.csv1)]' value='[weather_dirty.csv1].[Date]' />
+          <map key='[Date]' value='[weather_dirty.csv].[Date]' />
+          <map key='[F10 (weather_dirty.csv1)]' value='[weather_dirty.csv1].[F10]' />
+          <map key='[F10]' value='[weather_dirty.csv].[F10]' />
+          <map key='[F11 (weather_dirty.csv1)]' value='[weather_dirty.csv1].[F11]' />
+          <map key='[F11]' value='[weather_dirty.csv].[F11]' />
+          <map key='[F9 (weather_dirty.csv1)]' value='[weather_dirty.csv1].[F9]' />
+          <map key='[F9]' value='[weather_dirty.csv].[F9]' />
+          <map key='[Outlook (weather_dirty.csv1)]' value='[weather_dirty.csv1].[Outlook]' />
+          <map key='[Outlook]' value='[weather_dirty.csv].[Outlook]' />
+          <map key='[Precipitation_mm (weather_dirty.csv1)]' value='[weather_dirty.csv1].[Precipitation_mm]' />
+          <map key='[Precipitation_mm]' value='[weather_dirty.csv].[Precipitation_mm]' />
+          <map key='[Temperature_day (weather_dirty.csv1)]' value='[weather_dirty.csv1].[Temperature_day]' />
+          <map key='[Temperature_day]' value='[weather_dirty.csv].[Temperature_day]' />
+          <map key='[Temperature_night (weather_dirty.csv1)]' value='[weather_dirty.csv1].[Temperature_night]' />
+          <map key='[Temperature_night]' value='[weather_dirty.csv].[Temperature_night]' />
+          <map key='[WindSpeed_km/h (weather_dirty.csv1)]' value='[weather_dirty.csv1].[WindSpeed_km/h]' />
+          <map key='[WindSpeed_km/h]' value='[weather_dirty.csv].[WindSpeed_km/h]' />
+          <map key='[Wind_direction (weather_dirty.csv1)]' value='[weather_dirty.csv1].[Wind_direction]' />
+          <map key='[Wind_direction]' value='[weather_dirty.csv].[Wind_direction]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[weather_dirty.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;£&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;;&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[weather_dirty.csv1]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;£&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;;&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Date]</local-name>
+            <parent-name>[weather_dirty.csv]</parent-name>
+            <remote-alias>Date</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[weather_dirty.csv_9F66C5E05CFC49E6A2702F3A85C9F26C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Temperature_day</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Temperature_day]</local-name>
+            <parent-name>[weather_dirty.csv]</parent-name>
+            <remote-alias>Temperature_day</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[weather_dirty.csv_9F66C5E05CFC49E6A2702F3A85C9F26C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Temperature_night</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Temperature_night]</local-name>
+            <parent-name>[weather_dirty.csv]</parent-name>
+            <remote-alias>Temperature_night</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[weather_dirty.csv_9F66C5E05CFC49E6A2702F3A85C9F26C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AirPressure_hPa</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[AirPressure_hPa]</local-name>
+            <parent-name>[weather_dirty.csv]</parent-name>
+            <remote-alias>AirPressure_hPa</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[weather_dirty.csv_9F66C5E05CFC49E6A2702F3A85C9F26C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>WindSpeed_km/h</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[WindSpeed_km/h]</local-name>
+            <parent-name>[weather_dirty.csv]</parent-name>
+            <remote-alias>WindSpeed_km/h</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[weather_dirty.csv_9F66C5E05CFC49E6A2702F3A85C9F26C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Wind_direction</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Wind_direction]</local-name>
+            <parent-name>[weather_dirty.csv]</parent-name>
+            <remote-alias>Wind_direction</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[weather_dirty.csv_9F66C5E05CFC49E6A2702F3A85C9F26C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Precipitation_mm</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Precipitation_mm]</local-name>
+            <parent-name>[weather_dirty.csv]</parent-name>
+            <remote-alias>Precipitation_mm</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[weather_dirty.csv_9F66C5E05CFC49E6A2702F3A85C9F26C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Outlook</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Outlook]</local-name>
+            <parent-name>[weather_dirty.csv]</parent-name>
+            <remote-alias>Outlook</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[weather_dirty.csv_9F66C5E05CFC49E6A2702F3A85C9F26C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F9</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[F9]</local-name>
+            <parent-name>[weather_dirty.csv]</parent-name>
+            <remote-alias>F9</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[weather_dirty.csv_9F66C5E05CFC49E6A2702F3A85C9F26C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F10</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[F10]</local-name>
+            <parent-name>[weather_dirty.csv]</parent-name>
+            <remote-alias>F10</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[weather_dirty.csv_9F66C5E05CFC49E6A2702F3A85C9F26C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F11</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[F11]</local-name>
+            <parent-name>[weather_dirty.csv]</parent-name>
+            <remote-alias>F11</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[weather_dirty.csv_9F66C5E05CFC49E6A2702F3A85C9F26C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Date (weather_dirty.csv1)]</local-name>
+            <parent-name>[weather_dirty.csv1]</parent-name>
+            <remote-alias>Date</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[weather_dirty.csv_F1D0F6B0207C4109BDAABEFAAA8781B2]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Temperature_day</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Temperature_day (weather_dirty.csv1)]</local-name>
+            <parent-name>[weather_dirty.csv1]</parent-name>
+            <remote-alias>Temperature_day</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[weather_dirty.csv_F1D0F6B0207C4109BDAABEFAAA8781B2]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Temperature_night</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Temperature_night (weather_dirty.csv1)]</local-name>
+            <parent-name>[weather_dirty.csv1]</parent-name>
+            <remote-alias>Temperature_night</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[weather_dirty.csv_F1D0F6B0207C4109BDAABEFAAA8781B2]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AirPressure_hPa</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[AirPressure_hPa (weather_dirty.csv1)]</local-name>
+            <parent-name>[weather_dirty.csv1]</parent-name>
+            <remote-alias>AirPressure_hPa</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[weather_dirty.csv_F1D0F6B0207C4109BDAABEFAAA8781B2]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>WindSpeed_km/h</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[WindSpeed_km/h (weather_dirty.csv1)]</local-name>
+            <parent-name>[weather_dirty.csv1]</parent-name>
+            <remote-alias>WindSpeed_km/h</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[weather_dirty.csv_F1D0F6B0207C4109BDAABEFAAA8781B2]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Wind_direction</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Wind_direction (weather_dirty.csv1)]</local-name>
+            <parent-name>[weather_dirty.csv1]</parent-name>
+            <remote-alias>Wind_direction</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[weather_dirty.csv_F1D0F6B0207C4109BDAABEFAAA8781B2]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Precipitation_mm</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Precipitation_mm (weather_dirty.csv1)]</local-name>
+            <parent-name>[weather_dirty.csv1]</parent-name>
+            <remote-alias>Precipitation_mm</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[weather_dirty.csv_F1D0F6B0207C4109BDAABEFAAA8781B2]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Outlook</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Outlook (weather_dirty.csv1)]</local-name>
+            <parent-name>[weather_dirty.csv1]</parent-name>
+            <remote-alias>Outlook</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[weather_dirty.csv_F1D0F6B0207C4109BDAABEFAAA8781B2]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F9</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[F9 (weather_dirty.csv1)]</local-name>
+            <parent-name>[weather_dirty.csv1]</parent-name>
+            <remote-alias>F9</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[weather_dirty.csv_F1D0F6B0207C4109BDAABEFAAA8781B2]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F10</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[F10 (weather_dirty.csv1)]</local-name>
+            <parent-name>[weather_dirty.csv1]</parent-name>
+            <remote-alias>F10</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[weather_dirty.csv_F1D0F6B0207C4109BDAABEFAAA8781B2]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F11</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[F11 (weather_dirty.csv1)]</local-name>
+            <parent-name>[weather_dirty.csv1]</parent-name>
+            <remote-alias>F11</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[weather_dirty.csv_F1D0F6B0207C4109BDAABEFAAA8781B2]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='AirPressure hPa (weather dirty.csv1)' datatype='integer' name='[AirPressure_hPa (weather_dirty.csv1)]' role='measure' type='quantitative' />
+      <column caption='AirPressure hPa' datatype='integer' name='[AirPressure_hPa]' role='measure' type='quantitative' />
+      <column caption='Date (weather dirty.csv1)' datatype='date' name='[Date (weather_dirty.csv1)]' role='dimension' type='ordinal' />
+      <column caption='F10 (weather dirty.csv1)' datatype='string' name='[F10 (weather_dirty.csv1)]' role='dimension' type='nominal' />
+      <column caption='F11 (weather dirty.csv1)' datatype='string' name='[F11 (weather_dirty.csv1)]' role='dimension' type='nominal' />
+      <column caption='F9 (weather dirty.csv1)' datatype='string' name='[F9 (weather_dirty.csv1)]' role='dimension' type='nominal' />
+      <column caption='Outlook (weather dirty.csv1)' datatype='string' name='[Outlook (weather_dirty.csv1)]' role='dimension' type='nominal' />
+      <column caption='Precipitation mm (weather dirty.csv1)' datatype='integer' name='[Precipitation_mm (weather_dirty.csv1)]' role='measure' type='quantitative' />
+      <column caption='Precipitation mm' datatype='integer' name='[Precipitation_mm]' role='measure' type='quantitative' />
+      <column caption='Temperature day (weather dirty.csv1)' datatype='integer' name='[Temperature_day (weather_dirty.csv1)]' role='dimension' type='quantitative' />
+      <column caption='Temperature day' datatype='integer' name='[Temperature_day]' role='dimension' type='quantitative' />
+      <column caption='Temperature night (weather dirty.csv1)' datatype='integer' name='[Temperature_night (weather_dirty.csv1)]' role='measure' type='quantitative' />
+      <column caption='Temperature night' datatype='integer' name='[Temperature_night]' role='measure' type='quantitative' />
+      <column caption='WindSpeed km/h (weather dirty.csv1)' datatype='integer' name='[WindSpeed_km/h (weather_dirty.csv1)]' role='measure' type='quantitative' />
+      <column caption='WindSpeed km/h' datatype='integer' name='[WindSpeed_km/h]' role='measure' type='quantitative' />
+      <column caption='Wind direction (weather dirty.csv1)' datatype='string' name='[Wind_direction (weather_dirty.csv1)]' role='dimension' type='nominal' />
+      <column caption='Wind direction' datatype='string' name='[Wind_direction]' role='dimension' type='nominal' />
+      <column caption='weather_dirty.csv' datatype='table' name='[__tableau_internal_object_id__].[weather_dirty.csv_9F66C5E05CFC49E6A2702F3A85C9F26C]' role='measure' type='quantitative' />
+      <column caption='weather_dirty.csv1' datatype='table' name='[__tableau_internal_object_id__].[weather_dirty.csv_F1D0F6B0207C4109BDAABEFAAA8781B2]' role='measure' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_GB' class='hyper' dbname='C:/Users/Niko/AppData/Local/Temp/TableauTemp/#TableauTemp_17ewal91cmrmou1d6123y1595ryv.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='09/15/2025 02:26:31 PM' username='tableau_internal_user'>
+          <relation type='collection'>
+            <relation name='weather_dirty.csv_9F66C5E05CFC49E6A2702F3A85C9F26C' table='[Extract].[weather_dirty.csv_9F66C5E05CFC49E6A2702F3A85C9F26C]' type='table' />
+            <relation name='weather_dirty.csv_F1D0F6B0207C4109BDAABEFAAA8781B2' table='[Extract].[weather_dirty.csv_F1D0F6B0207C4109BDAABEFAAA8781B2]' type='table' />
+          </relation>
+          <cols>
+            <map key='[AirPressure_hPa (weather_dirty.csv1)]' value='[weather_dirty.csv_F1D0F6B0207C4109BDAABEFAAA8781B2].[AirPressure_hPa]' />
+            <map key='[AirPressure_hPa]' value='[weather_dirty.csv_9F66C5E05CFC49E6A2702F3A85C9F26C].[AirPressure_hPa]' />
+            <map key='[Date (weather_dirty.csv1)]' value='[weather_dirty.csv_F1D0F6B0207C4109BDAABEFAAA8781B2].[Date]' />
+            <map key='[Date]' value='[weather_dirty.csv_9F66C5E05CFC49E6A2702F3A85C9F26C].[Date]' />
+            <map key='[F10 (weather_dirty.csv1)]' value='[weather_dirty.csv_F1D0F6B0207C4109BDAABEFAAA8781B2].[F10]' />
+            <map key='[F10]' value='[weather_dirty.csv_9F66C5E05CFC49E6A2702F3A85C9F26C].[F10]' />
+            <map key='[F11 (weather_dirty.csv1)]' value='[weather_dirty.csv_F1D0F6B0207C4109BDAABEFAAA8781B2].[F11]' />
+            <map key='[F11]' value='[weather_dirty.csv_9F66C5E05CFC49E6A2702F3A85C9F26C].[F11]' />
+            <map key='[F9 (weather_dirty.csv1)]' value='[weather_dirty.csv_F1D0F6B0207C4109BDAABEFAAA8781B2].[F9]' />
+            <map key='[F9]' value='[weather_dirty.csv_9F66C5E05CFC49E6A2702F3A85C9F26C].[F9]' />
+            <map key='[Outlook (weather_dirty.csv1)]' value='[weather_dirty.csv_F1D0F6B0207C4109BDAABEFAAA8781B2].[Outlook]' />
+            <map key='[Outlook]' value='[weather_dirty.csv_9F66C5E05CFC49E6A2702F3A85C9F26C].[Outlook]' />
+            <map key='[Precipitation_mm (weather_dirty.csv1)]' value='[weather_dirty.csv_F1D0F6B0207C4109BDAABEFAAA8781B2].[Precipitation_mm]' />
+            <map key='[Precipitation_mm]' value='[weather_dirty.csv_9F66C5E05CFC49E6A2702F3A85C9F26C].[Precipitation_mm]' />
+            <map key='[Temperature_day (weather_dirty.csv1)]' value='[weather_dirty.csv_F1D0F6B0207C4109BDAABEFAAA8781B2].[Temperature_day]' />
+            <map key='[Temperature_day]' value='[weather_dirty.csv_9F66C5E05CFC49E6A2702F3A85C9F26C].[Temperature_day]' />
+            <map key='[Temperature_night (weather_dirty.csv1)]' value='[weather_dirty.csv_F1D0F6B0207C4109BDAABEFAAA8781B2].[Temperature_night]' />
+            <map key='[Temperature_night]' value='[weather_dirty.csv_9F66C5E05CFC49E6A2702F3A85C9F26C].[Temperature_night]' />
+            <map key='[WindSpeed_km/h (weather_dirty.csv1)]' value='[weather_dirty.csv_F1D0F6B0207C4109BDAABEFAAA8781B2].[WindSpeed_km/h]' />
+            <map key='[WindSpeed_km/h]' value='[weather_dirty.csv_9F66C5E05CFC49E6A2702F3A85C9F26C].[WindSpeed_km/h]' />
+            <map key='[Wind_direction (weather_dirty.csv1)]' value='[weather_dirty.csv_F1D0F6B0207C4109BDAABEFAAA8781B2].[Wind_direction]' />
+            <map key='[Wind_direction]' value='[weather_dirty.csv_9F66C5E05CFC49E6A2702F3A85C9F26C].[Wind_direction]' />
+          </cols>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Date]</local-name>
+              <parent-name>[weather_dirty.csv_9F66C5E05CFC49E6A2702F3A85C9F26C]</parent-name>
+              <remote-alias>Date</remote-alias>
+              <ordinal>0</ordinal>
+              <family>weather_dirty.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>365</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[weather_dirty.csv_9F66C5E05CFC49E6A2702F3A85C9F26C]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Temperature_day</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Temperature_day]</local-name>
+              <parent-name>[weather_dirty.csv_9F66C5E05CFC49E6A2702F3A85C9F26C]</parent-name>
+              <remote-alias>Temperature_day</remote-alias>
+              <ordinal>1</ordinal>
+              <family>weather_dirty.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>39</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[weather_dirty.csv_9F66C5E05CFC49E6A2702F3A85C9F26C]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Temperature_night</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Temperature_night]</local-name>
+              <parent-name>[weather_dirty.csv_9F66C5E05CFC49E6A2702F3A85C9F26C]</parent-name>
+              <remote-alias>Temperature_night</remote-alias>
+              <ordinal>2</ordinal>
+              <family>weather_dirty.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>32</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[weather_dirty.csv_9F66C5E05CFC49E6A2702F3A85C9F26C]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>AirPressure_hPa</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[AirPressure_hPa]</local-name>
+              <parent-name>[weather_dirty.csv_9F66C5E05CFC49E6A2702F3A85C9F26C]</parent-name>
+              <remote-alias>AirPressure_hPa</remote-alias>
+              <ordinal>3</ordinal>
+              <family>weather_dirty.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>42</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[weather_dirty.csv_9F66C5E05CFC49E6A2702F3A85C9F26C]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>WindSpeed_km/h</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[WindSpeed_km/h]</local-name>
+              <parent-name>[weather_dirty.csv_9F66C5E05CFC49E6A2702F3A85C9F26C]</parent-name>
+              <remote-alias>WindSpeed_km/h</remote-alias>
+              <ordinal>4</ordinal>
+              <family>weather_dirty.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>26</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[weather_dirty.csv_9F66C5E05CFC49E6A2702F3A85C9F26C]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Wind_direction</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Wind_direction]</local-name>
+              <parent-name>[weather_dirty.csv_9F66C5E05CFC49E6A2702F3A85C9F26C]</parent-name>
+              <remote-alias>Wind_direction</remote-alias>
+              <ordinal>5</ordinal>
+              <family>weather_dirty.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[weather_dirty.csv_9F66C5E05CFC49E6A2702F3A85C9F26C]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Precipitation_mm</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Precipitation_mm]</local-name>
+              <parent-name>[weather_dirty.csv_9F66C5E05CFC49E6A2702F3A85C9F26C]</parent-name>
+              <remote-alias>Precipitation_mm</remote-alias>
+              <ordinal>6</ordinal>
+              <family>weather_dirty.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>19</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[weather_dirty.csv_9F66C5E05CFC49E6A2702F3A85C9F26C]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Outlook</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Outlook]</local-name>
+              <parent-name>[weather_dirty.csv_9F66C5E05CFC49E6A2702F3A85C9F26C]</parent-name>
+              <remote-alias>Outlook</remote-alias>
+              <ordinal>7</ordinal>
+              <family>weather_dirty.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>12</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[weather_dirty.csv_9F66C5E05CFC49E6A2702F3A85C9F26C]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>F9</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[F9]</local-name>
+              <parent-name>[weather_dirty.csv_9F66C5E05CFC49E6A2702F3A85C9F26C]</parent-name>
+              <remote-alias>F9</remote-alias>
+              <ordinal>8</ordinal>
+              <family>weather_dirty.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[weather_dirty.csv_9F66C5E05CFC49E6A2702F3A85C9F26C]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>F10</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[F10]</local-name>
+              <parent-name>[weather_dirty.csv_9F66C5E05CFC49E6A2702F3A85C9F26C]</parent-name>
+              <remote-alias>F10</remote-alias>
+              <ordinal>9</ordinal>
+              <family>weather_dirty.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[weather_dirty.csv_9F66C5E05CFC49E6A2702F3A85C9F26C]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>F11</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[F11]</local-name>
+              <parent-name>[weather_dirty.csv_9F66C5E05CFC49E6A2702F3A85C9F26C]</parent-name>
+              <remote-alias>F11</remote-alias>
+              <ordinal>10</ordinal>
+              <family>weather_dirty.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[weather_dirty.csv_9F66C5E05CFC49E6A2702F3A85C9F26C]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Date (weather_dirty.csv1)]</local-name>
+              <parent-name>[weather_dirty.csv_F1D0F6B0207C4109BDAABEFAAA8781B2]</parent-name>
+              <remote-alias>Date</remote-alias>
+              <ordinal>11</ordinal>
+              <family>weather_dirty.csv1</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>365</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[weather_dirty.csv_F1D0F6B0207C4109BDAABEFAAA8781B2]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Temperature_day</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Temperature_day (weather_dirty.csv1)]</local-name>
+              <parent-name>[weather_dirty.csv_F1D0F6B0207C4109BDAABEFAAA8781B2]</parent-name>
+              <remote-alias>Temperature_day</remote-alias>
+              <ordinal>12</ordinal>
+              <family>weather_dirty.csv1</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>39</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[weather_dirty.csv_F1D0F6B0207C4109BDAABEFAAA8781B2]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Temperature_night</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Temperature_night (weather_dirty.csv1)]</local-name>
+              <parent-name>[weather_dirty.csv_F1D0F6B0207C4109BDAABEFAAA8781B2]</parent-name>
+              <remote-alias>Temperature_night</remote-alias>
+              <ordinal>13</ordinal>
+              <family>weather_dirty.csv1</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>32</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[weather_dirty.csv_F1D0F6B0207C4109BDAABEFAAA8781B2]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>AirPressure_hPa</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[AirPressure_hPa (weather_dirty.csv1)]</local-name>
+              <parent-name>[weather_dirty.csv_F1D0F6B0207C4109BDAABEFAAA8781B2]</parent-name>
+              <remote-alias>AirPressure_hPa</remote-alias>
+              <ordinal>14</ordinal>
+              <family>weather_dirty.csv1</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>42</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[weather_dirty.csv_F1D0F6B0207C4109BDAABEFAAA8781B2]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>WindSpeed_km/h</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[WindSpeed_km/h (weather_dirty.csv1)]</local-name>
+              <parent-name>[weather_dirty.csv_F1D0F6B0207C4109BDAABEFAAA8781B2]</parent-name>
+              <remote-alias>WindSpeed_km/h</remote-alias>
+              <ordinal>15</ordinal>
+              <family>weather_dirty.csv1</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>26</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[weather_dirty.csv_F1D0F6B0207C4109BDAABEFAAA8781B2]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Wind_direction</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Wind_direction (weather_dirty.csv1)]</local-name>
+              <parent-name>[weather_dirty.csv_F1D0F6B0207C4109BDAABEFAAA8781B2]</parent-name>
+              <remote-alias>Wind_direction</remote-alias>
+              <ordinal>16</ordinal>
+              <family>weather_dirty.csv1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[weather_dirty.csv_F1D0F6B0207C4109BDAABEFAAA8781B2]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Precipitation_mm</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Precipitation_mm (weather_dirty.csv1)]</local-name>
+              <parent-name>[weather_dirty.csv_F1D0F6B0207C4109BDAABEFAAA8781B2]</parent-name>
+              <remote-alias>Precipitation_mm</remote-alias>
+              <ordinal>17</ordinal>
+              <family>weather_dirty.csv1</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>19</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[weather_dirty.csv_F1D0F6B0207C4109BDAABEFAAA8781B2]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Outlook</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Outlook (weather_dirty.csv1)]</local-name>
+              <parent-name>[weather_dirty.csv_F1D0F6B0207C4109BDAABEFAAA8781B2]</parent-name>
+              <remote-alias>Outlook</remote-alias>
+              <ordinal>18</ordinal>
+              <family>weather_dirty.csv1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>12</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[weather_dirty.csv_F1D0F6B0207C4109BDAABEFAAA8781B2]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>F9</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[F9 (weather_dirty.csv1)]</local-name>
+              <parent-name>[weather_dirty.csv_F1D0F6B0207C4109BDAABEFAAA8781B2]</parent-name>
+              <remote-alias>F9</remote-alias>
+              <ordinal>19</ordinal>
+              <family>weather_dirty.csv1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[weather_dirty.csv_F1D0F6B0207C4109BDAABEFAAA8781B2]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>F10</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[F10 (weather_dirty.csv1)]</local-name>
+              <parent-name>[weather_dirty.csv_F1D0F6B0207C4109BDAABEFAAA8781B2]</parent-name>
+              <remote-alias>F10</remote-alias>
+              <ordinal>20</ordinal>
+              <family>weather_dirty.csv1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[weather_dirty.csv_F1D0F6B0207C4109BDAABEFAAA8781B2]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>F11</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[F11 (weather_dirty.csv1)]</local-name>
+              <parent-name>[weather_dirty.csv_F1D0F6B0207C4109BDAABEFAAA8781B2]</parent-name>
+              <remote-alias>F11</remote-alias>
+              <ordinal>21</ordinal>
+              <family>weather_dirty.csv1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[weather_dirty.csv_F1D0F6B0207C4109BDAABEFAAA8781B2]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United Kingdom&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <object-graph>
+        <objects>
+          <object caption='weather_dirty.csv' id='weather_dirty.csv_9F66C5E05CFC49E6A2702F3A85C9F26C'>
+            <properties context=''>
+              <relation connection='textscan.19nk72i0pnw1aw1bnkz3313uh52d' name='weather_dirty.csv' table='[weather_dirty#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_GB' separator=';'>
+                  <column datatype='date' name='Date' ordinal='0' />
+                  <column datatype='integer' name='Temperature_day' ordinal='1' />
+                  <column datatype='integer' name='Temperature_night' ordinal='2' />
+                  <column datatype='integer' name='AirPressure_hPa' ordinal='3' />
+                  <column datatype='integer' name='WindSpeed_km/h' ordinal='4' />
+                  <column datatype='string' name='Wind_direction' ordinal='5' />
+                  <column datatype='integer' name='Precipitation_mm' ordinal='6' />
+                  <column datatype='string' name='Outlook' ordinal='7' />
+                  <column datatype='string' name='F9' ordinal='8' />
+                  <column datatype='string' name='F10' ordinal='9' />
+                  <column datatype='string' name='F11' ordinal='10' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='weather_dirty.csv_9F66C5E05CFC49E6A2702F3A85C9F26C' table='[Extract].[weather_dirty.csv_9F66C5E05CFC49E6A2702F3A85C9F26C]' type='table' />
+            </properties>
+          </object>
+          <object caption='weather_dirty.csv1' id='weather_dirty.csv_F1D0F6B0207C4109BDAABEFAAA8781B2'>
+            <properties context=''>
+              <relation connection='textscan.19nk72i0pnw1aw1bnkz3313uh52d' name='weather_dirty.csv1' table='[weather_dirty#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_GB' separator=';'>
+                  <column datatype='date' name='Date' ordinal='0' />
+                  <column datatype='integer' name='Temperature_day' ordinal='1' />
+                  <column datatype='integer' name='Temperature_night' ordinal='2' />
+                  <column datatype='integer' name='AirPressure_hPa' ordinal='3' />
+                  <column datatype='integer' name='WindSpeed_km/h' ordinal='4' />
+                  <column datatype='string' name='Wind_direction' ordinal='5' />
+                  <column datatype='integer' name='Precipitation_mm' ordinal='6' />
+                  <column datatype='string' name='Outlook' ordinal='7' />
+                  <column datatype='string' name='F9' ordinal='8' />
+                  <column datatype='string' name='F10' ordinal='9' />
+                  <column datatype='string' name='F11' ordinal='10' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='weather_dirty.csv_F1D0F6B0207C4109BDAABEFAAA8781B2' table='[Extract].[weather_dirty.csv_F1D0F6B0207C4109BDAABEFAAA8781B2]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[Temperature_day]' />
+              <expression op='[Temperature_night (weather_dirty.csv1)]' />
+            </expression>
+            <first-end-point object-id='weather_dirty.csv_9F66C5E05CFC49E6A2702F3A85C9F26C' />
+            <second-end-point object-id='weather_dirty.csv_F1D0F6B0207C4109BDAABEFAAA8781B2' />
+          </relationship>
+        </relationships>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Temperature by year and outlook</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='weather_dirty+' name='federated.0wa6tc21mi859z1ds8p000rnnie9' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0wa6tc21mi859z1ds8p000rnnie9'>
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[Outlook]' role='dimension' type='nominal' />
+            <column caption='Temperature day' datatype='integer' name='[Temperature_day]' role='dimension' type='quantitative' />
+            <column-instance column='[Outlook]' derivation='None' name='[none:Outlook:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Temperature_day]' derivation='None' name='[none:Temperature_day:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Date]' derivation='Year' name='[yr:Date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0wa6tc21mi859z1ds8p000rnnie9].[:Measure Names]'>
+            <groupfilter function='level-members' level='[:Measure Names]' />
+          </filter>
+          <slices>
+            <column>[federated.0wa6tc21mi859z1ds8p000rnnie9].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='5' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0wa6tc21mi859z1ds8p000rnnie9].[none:Temperature_day:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0wa6tc21mi859z1ds8p000rnnie9].[none:Temperature_day:qk]</rows>
+        <cols>([federated.0wa6tc21mi859z1ds8p000rnnie9].[yr:Date:ok] / [federated.0wa6tc21mi859z1ds8p000rnnie9].[none:Outlook:nk])</cols>
+      </table>
+      <simple-id uuid='{63C9797E-AE50-464C-B2ED-FE733DC09642}' />
+    </worksheet>
+    <worksheet name='Sheet 2'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='weather_dirty+' name='federated.0wa6tc21mi859z1ds8p000rnnie9' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0wa6tc21mi859z1ds8p000rnnie9'>
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column caption='WindSpeed km/h' datatype='integer' name='[WindSpeed_km/h]' role='measure' type='quantitative' />
+            <column caption='Wind direction' datatype='string' name='[Wind_direction]' role='dimension' type='nominal' />
+            <column-instance column='[Wind_direction]' derivation='None' name='[none:Wind_direction:nk]' pivot='key' type='nominal' />
+            <column-instance column='[WindSpeed_km/h]' derivation='Sum' name='[sum:WindSpeed_km/h:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Date]' derivation='Year' name='[yr:Date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0wa6tc21mi859z1ds8p000rnnie9].[sum:WindSpeed_km/h:qk]' />
+              <text column='[federated.0wa6tc21mi859z1ds8p000rnnie9].[sum:WindSpeed_km/h:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0wa6tc21mi859z1ds8p000rnnie9].[sum:WindSpeed_km/h:qk]</rows>
+        <cols>([federated.0wa6tc21mi859z1ds8p000rnnie9].[yr:Date:ok] / [federated.0wa6tc21mi859z1ds8p000rnnie9].[none:Wind_direction:nk])</cols>
+      </table>
+      <simple-id uuid='{BB6AAA22-6A80-4FAB-9B50-DFCA9879C7C4}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0wa6tc21mi859z1ds8p000rnnie9].[none:F10:nk]</field>
+            <field>[federated.0wa6tc21mi859z1ds8p000rnnie9].[none:Outlook:nk]</field>
+            <field>[federated.0wa6tc21mi859z1ds8p000rnnie9].[none:Temperature_day:qk]</field>
+            <field>[federated.0wa6tc21mi859z1ds8p000rnnie9].[none:Wind_direction:nk]</field>
+            <field>[federated.0wa6tc21mi859z1ds8p000rnnie9].[yr:Date:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{5FCD006D-8E6E-440E-A360-59366925B717}' />
+    </window>
+    <window class='worksheet' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='4' param='[federated.0wa6tc21mi859z1ds8p000rnnie9].[sum:WindSpeed_km/h:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0wa6tc21mi859z1ds8p000rnnie9].[none:Outlook:nk]</field>
+            <field>[federated.0wa6tc21mi859z1ds8p000rnnie9].[none:Wind_direction:nk]</field>
+            <field>[federated.0wa6tc21mi859z1ds8p000rnnie9].[yr:Date:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{21D06747-5BA1-46F9-B94E-E3F754D191B7}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Sheet 2' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAASmUlEQVR4nO3dSXMb+XnH8W93YwcIkgA3kOAmcqTxLHaNrLIn43IqnkMqPqTKlaN9ca5J
+      XkHeQw6551UklyS+Tdllz4wtZTzWSBRJcadI7PvSje5/DpI4okhq0CQgEOznc5PYDTzoxq/R
+      y//p1pRSCiE8Sh90AUIMUk8DUK1We/lyQvRdTwMge1PDZ397k0y+xMs1Z5rma1Mo9vf3UU6H
+      UrlCJpOlXC6TLxROpqiXMtRfzJbNZCgUimfex7JMbKtNsVzrzwe5JN+gCxCDtb6xgeOsMb+8
+      ynG2xN7WYz744PtUWzZ/9aMfYlayVE0dlMNX//clOzs5bq2kSSbjPHrwgI7yUco95e7P/5FH
+      93/Hs3yVlfQUf3pwn/HROEYwRCOfo1DOsXz7+3SsFg+yWeLRBPlqiZ9++jdEjMHticsxgMfV
+      K0UapuLp44ds7R6STIxzuLvNs+MMjoK9gyMW5mfQjAC1gy3Sq0u0VIBc/hg9EGH78Q7KMAA4
+      zhyh6xq5owMiyTkOt9fIFvIUi3UmJyZxrCZ7+3vUWy221vYYi0VoDHivQevlWaBKpUI8Hu/V
+      y4m3yHEcNE1DKYWm6SjloOs6GxsbrK6uXjifUgqlFLqun7yGpmkv/uag0ECpk9fWdR3btjFe
+      hGbQJADiShqNBpFIZNBlXJrsAl2S2W5hdmyazQa2o2g2GjhK0bEsHA+dDOh0OoMu4UrkIPiS
+      6rUqhUIR3R/EMHTCAT+5Ypns0T533v+IaEgW7TCQX4BLKuRzJBIJjEAQu2OSyxUJ6jaNlkm1
+      3hp0eaJLspm6pJF4HFv3Ew9BMDFLIZcnFE/y4x9NoRv+QZcnunRyEFytVq98IWvYD4iEe8O+
+      zk9+AUZGRnrygnIWyHuGeZ3LMYDwNAmA8DRXAVDKZn93i3Klws7WFuVKle3tbdodp1/1CdFX
+      rs4CKceiVrMoHq8x98H32Hm4xvzt2xSKRaYSYziOM/QXRoQ7tm0P9Tp3FQBNDzI+FkaNR8nt
+      HzI+PUX26IiZ9CKGYaDrOj6fnFn1EsMwhnqduwuApjGVSgMa0yjQvh3oJMQwch3db7/s2sv/
+      6GE5QrxdchZIeJoEQHiaBEB4mgRAeJoEQHiaBEB4mgRAeJoEQHiaBEB4mgRAeJoEQHiaBEB4
+      mgRAeJoEQHiay46wDttb2wSCARrNNrHYCLValVR6iVhY7oUjho+7ACiHRqNJq1pn+t1V9v78
+      DYvvfo9qtUw4MC4tkR7krZZITSc2EiMSG6F8cMT87Xco5LLMzi9iGLq0RHrQsLdEyu3RxZUM
+      +zqXg2DhaRIA4WkSAOFpEgDhaRIA4WkSAOFpEgDhaRIA4WkSAOFpEgDhaRIA4WkSAOFpEgDh
+      aRIA4WkSAOFpLjvCOhzuHdC2LBxHER0ZoVatkUovSkukGEouO8J8hAMGPt2Pf2KU/T9/w4K0
+      RHqap1oiQaEFIkxNxtja3iP9ziqFXOZFS6Q8JdKLpCXyFcPeHifcG/Z1LgfBwtMkAMLTJADC
+      0yQAwtMkAMLTJADC0yQAwtMkAMLTJADC0yQAwtMkAMLTJADC0yQAwtMkAMLTJADC01w/JG93
+      e4vxZJLMcZZYPE61WiU1Jy2RYji5CoBjm5TKNdrVBpO3b7EnLZGe56mWSN0IMJEcwx8MUTw4
+      Ym51hUI2Q0paIj1LWiJfMeztccK9YV/nchAsPE0CIDxNAiA8TQIgPE0CIDxNAiA8TQIgPE0C
+      IDxNAiA8TQLQJ61Wi88++4xMJsPnn3/O7u4u9+/fx7btQZcmXnFuAI52N/nt735Hplh72/Xc
+      GLZtY1kWpmkSiURwHIdyuYxpmoMuTbziTADsTosvP7+PbKeuRtd1RkZGsCyLUqmE4ziEQiEM
+      wxh0aeIVZwbDtetlHq1vMTI+wcLcLH5f93tJwz4wSrg37Ov8zDjWYHSUmUSMP/zpD+zsLvLT
+      T36I35BDhW7sZCr8+38+6Hr6v/vhEn/70WIfKxLf5dyB3MfPjphOL3H79nuvffkVtm2jaTpK
+      KXRdx3EcdMNAe0sFX2eW7ZApN7uevt6y+liN6Ma5AYhGY5TLdWzHOfX/ynHYWF9neiJBplTF
+      p2l0HMXkzBzjI+G3UrAQvXRuABKTSXK1Jh37tV4ZTSMcDHC4d8jk6i0O1zZJryzTarWwIwHP
+      t0S6PcV5E5bXjWuJtDst1jd2yRby3LpzdsfG5/OTvv0utWKOOx+8Ry6XZ2Z2FkPXPN8S6fYM
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>

@@ -1,0 +1,2287 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20252.25.0818.1050                               -->
+<workbook original-version='18.1' source-build='2025.2.2 (20252.25.0818.1050)' source-platform='win' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <repository-location id='Practice1_17579438355360' path='/workbooks' revision='1.0' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='shopping_behavior_updated+' inline='true' name='federated.0hq2p9k1p0lc6d1gvylsm02l0557' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='shopping_behavior_updated' name='textscan.1pd9oic0acod8o1gmaz3c07c5yuy'>
+            <connection class='textscan' directory='E:/Mykola&apos;s stuff/Other/Tableau' filename='shopping_behavior_updated.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation type='collection'>
+          <relation connection='textscan.1pd9oic0acod8o1gmaz3c07c5yuy' name='shopping_behavior_updated.csv' table='[shopping_behavior_updated#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+              <column datatype='integer' name='Customer ID' ordinal='0' />
+              <column datatype='integer' name='Age' ordinal='1' />
+              <column datatype='string' name='Gender' ordinal='2' />
+              <column datatype='string' name='Item Purchased' ordinal='3' />
+              <column datatype='string' name='Category' ordinal='4' />
+              <column datatype='integer' name='Purchase Amount (USD)' ordinal='5' />
+              <column datatype='string' name='Location' ordinal='6' />
+              <column datatype='string' name='Size' ordinal='7' />
+              <column datatype='string' name='Color' ordinal='8' />
+              <column datatype='string' name='Season' ordinal='9' />
+              <column datatype='real' name='Review Rating' ordinal='10' />
+              <column datatype='string' name='Subscription Status' ordinal='11' />
+              <column datatype='string' name='Shipping Type' ordinal='12' />
+              <column datatype='string' name='Discount Applied' ordinal='13' />
+              <column datatype='string' name='Promo Code Used' ordinal='14' />
+              <column datatype='integer' name='Previous Purchases' ordinal='15' />
+              <column datatype='string' name='Payment Method' ordinal='16' />
+              <column datatype='string' name='Frequency of Purchases' ordinal='17' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1pd9oic0acod8o1gmaz3c07c5yuy' name='shopping_trends.csv' table='[shopping_trends#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+              <column datatype='integer' name='Customer ID' ordinal='0' />
+              <column datatype='integer' name='Age' ordinal='1' />
+              <column datatype='string' name='Gender' ordinal='2' />
+              <column datatype='string' name='Item Purchased' ordinal='3' />
+              <column datatype='string' name='Category' ordinal='4' />
+              <column datatype='integer' name='Purchase Amount (USD)' ordinal='5' />
+              <column datatype='string' name='Location' ordinal='6' />
+              <column datatype='string' name='Size' ordinal='7' />
+              <column datatype='string' name='Color' ordinal='8' />
+              <column datatype='string' name='Season' ordinal='9' />
+              <column datatype='real' name='Review Rating' ordinal='10' />
+              <column datatype='string' name='Subscription Status' ordinal='11' />
+              <column datatype='string' name='Payment Method' ordinal='12' />
+              <column datatype='string' name='Shipping Type' ordinal='13' />
+              <column datatype='string' name='Discount Applied' ordinal='14' />
+              <column datatype='string' name='Promo Code Used' ordinal='15' />
+              <column datatype='integer' name='Previous Purchases' ordinal='16' />
+              <column datatype='string' name='Preferred Payment Method' ordinal='17' />
+              <column datatype='string' name='Frequency of Purchases' ordinal='18' />
+            </columns>
+          </relation>
+        </relation>
+        <cols>
+          <map key='[Age (shopping_trends.csv)]' value='[shopping_trends.csv].[Age]' />
+          <map key='[Age]' value='[shopping_behavior_updated.csv].[Age]' />
+          <map key='[Category (shopping_trends.csv)]' value='[shopping_trends.csv].[Category]' />
+          <map key='[Category]' value='[shopping_behavior_updated.csv].[Category]' />
+          <map key='[Color (shopping_trends.csv)]' value='[shopping_trends.csv].[Color]' />
+          <map key='[Color]' value='[shopping_behavior_updated.csv].[Color]' />
+          <map key='[Customer ID (shopping_trends.csv)]' value='[shopping_trends.csv].[Customer ID]' />
+          <map key='[Customer ID]' value='[shopping_behavior_updated.csv].[Customer ID]' />
+          <map key='[Discount Applied (shopping_trends.csv)]' value='[shopping_trends.csv].[Discount Applied]' />
+          <map key='[Discount Applied]' value='[shopping_behavior_updated.csv].[Discount Applied]' />
+          <map key='[Frequency of Purchases (shopping_trends.csv)]' value='[shopping_trends.csv].[Frequency of Purchases]' />
+          <map key='[Frequency of Purchases]' value='[shopping_behavior_updated.csv].[Frequency of Purchases]' />
+          <map key='[Gender (shopping_trends.csv)]' value='[shopping_trends.csv].[Gender]' />
+          <map key='[Gender]' value='[shopping_behavior_updated.csv].[Gender]' />
+          <map key='[Item Purchased (shopping_trends.csv)]' value='[shopping_trends.csv].[Item Purchased]' />
+          <map key='[Item Purchased]' value='[shopping_behavior_updated.csv].[Item Purchased]' />
+          <map key='[Location (shopping_trends.csv)]' value='[shopping_trends.csv].[Location]' />
+          <map key='[Location]' value='[shopping_behavior_updated.csv].[Location]' />
+          <map key='[Payment Method (shopping_trends.csv)]' value='[shopping_trends.csv].[Payment Method]' />
+          <map key='[Payment Method]' value='[shopping_behavior_updated.csv].[Payment Method]' />
+          <map key='[Preferred Payment Method]' value='[shopping_trends.csv].[Preferred Payment Method]' />
+          <map key='[Previous Purchases (shopping_trends.csv)]' value='[shopping_trends.csv].[Previous Purchases]' />
+          <map key='[Previous Purchases]' value='[shopping_behavior_updated.csv].[Previous Purchases]' />
+          <map key='[Promo Code Used (shopping_trends.csv)]' value='[shopping_trends.csv].[Promo Code Used]' />
+          <map key='[Promo Code Used]' value='[shopping_behavior_updated.csv].[Promo Code Used]' />
+          <map key='[Purchase Amount (USD) (shopping_trends.csv)]' value='[shopping_trends.csv].[Purchase Amount (USD)]' />
+          <map key='[Purchase Amount (USD)]' value='[shopping_behavior_updated.csv].[Purchase Amount (USD)]' />
+          <map key='[Review Rating (shopping_trends.csv)]' value='[shopping_trends.csv].[Review Rating]' />
+          <map key='[Review Rating]' value='[shopping_behavior_updated.csv].[Review Rating]' />
+          <map key='[Season (shopping_trends.csv)]' value='[shopping_trends.csv].[Season]' />
+          <map key='[Season]' value='[shopping_behavior_updated.csv].[Season]' />
+          <map key='[Shipping Type (shopping_trends.csv)]' value='[shopping_trends.csv].[Shipping Type]' />
+          <map key='[Shipping Type]' value='[shopping_behavior_updated.csv].[Shipping Type]' />
+          <map key='[Size (shopping_trends.csv)]' value='[shopping_trends.csv].[Size]' />
+          <map key='[Size]' value='[shopping_behavior_updated.csv].[Size]' />
+          <map key='[Subscription Status (shopping_trends.csv)]' value='[shopping_trends.csv].[Subscription Status]' />
+          <map key='[Subscription Status]' value='[shopping_behavior_updated.csv].[Subscription Status]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[shopping_behavior_updated.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;£&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[shopping_trends.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;£&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Customer ID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Customer ID]</local-name>
+            <parent-name>[shopping_behavior_updated.csv]</parent-name>
+            <remote-alias>Customer ID</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Age</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Age]</local-name>
+            <parent-name>[shopping_behavior_updated.csv]</parent-name>
+            <remote-alias>Age</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Gender</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Gender]</local-name>
+            <parent-name>[shopping_behavior_updated.csv]</parent-name>
+            <remote-alias>Gender</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Item Purchased</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Item Purchased]</local-name>
+            <parent-name>[shopping_behavior_updated.csv]</parent-name>
+            <remote-alias>Item Purchased</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Category</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Category]</local-name>
+            <parent-name>[shopping_behavior_updated.csv]</parent-name>
+            <remote-alias>Category</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Purchase Amount (USD)</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Purchase Amount (USD)]</local-name>
+            <parent-name>[shopping_behavior_updated.csv]</parent-name>
+            <remote-alias>Purchase Amount (USD)</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Location</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Location]</local-name>
+            <parent-name>[shopping_behavior_updated.csv]</parent-name>
+            <remote-alias>Location</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Size</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Size]</local-name>
+            <parent-name>[shopping_behavior_updated.csv]</parent-name>
+            <remote-alias>Size</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Color</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Color]</local-name>
+            <parent-name>[shopping_behavior_updated.csv]</parent-name>
+            <remote-alias>Color</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Season</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Season]</local-name>
+            <parent-name>[shopping_behavior_updated.csv]</parent-name>
+            <remote-alias>Season</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Review Rating</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Review Rating]</local-name>
+            <parent-name>[shopping_behavior_updated.csv]</parent-name>
+            <remote-alias>Review Rating</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Subscription Status</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Subscription Status]</local-name>
+            <parent-name>[shopping_behavior_updated.csv]</parent-name>
+            <remote-alias>Subscription Status</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Shipping Type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Shipping Type]</local-name>
+            <parent-name>[shopping_behavior_updated.csv]</parent-name>
+            <remote-alias>Shipping Type</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Discount Applied</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Discount Applied]</local-name>
+            <parent-name>[shopping_behavior_updated.csv]</parent-name>
+            <remote-alias>Discount Applied</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Promo Code Used</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Promo Code Used]</local-name>
+            <parent-name>[shopping_behavior_updated.csv]</parent-name>
+            <remote-alias>Promo Code Used</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Previous Purchases</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Previous Purchases]</local-name>
+            <parent-name>[shopping_behavior_updated.csv]</parent-name>
+            <remote-alias>Previous Purchases</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Payment Method</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Payment Method]</local-name>
+            <parent-name>[shopping_behavior_updated.csv]</parent-name>
+            <remote-alias>Payment Method</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Frequency of Purchases</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Frequency of Purchases]</local-name>
+            <parent-name>[shopping_behavior_updated.csv]</parent-name>
+            <remote-alias>Frequency of Purchases</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Customer ID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Customer ID (shopping_trends.csv)]</local-name>
+            <parent-name>[shopping_trends.csv]</parent-name>
+            <remote-alias>Customer ID</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Age</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Age (shopping_trends.csv)]</local-name>
+            <parent-name>[shopping_trends.csv]</parent-name>
+            <remote-alias>Age</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Gender</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Gender (shopping_trends.csv)]</local-name>
+            <parent-name>[shopping_trends.csv]</parent-name>
+            <remote-alias>Gender</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Item Purchased</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Item Purchased (shopping_trends.csv)]</local-name>
+            <parent-name>[shopping_trends.csv]</parent-name>
+            <remote-alias>Item Purchased</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Category</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Category (shopping_trends.csv)]</local-name>
+            <parent-name>[shopping_trends.csv]</parent-name>
+            <remote-alias>Category</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Purchase Amount (USD)</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Purchase Amount (USD) (shopping_trends.csv)]</local-name>
+            <parent-name>[shopping_trends.csv]</parent-name>
+            <remote-alias>Purchase Amount (USD)</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Location</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Location (shopping_trends.csv)]</local-name>
+            <parent-name>[shopping_trends.csv]</parent-name>
+            <remote-alias>Location</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Size</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Size (shopping_trends.csv)]</local-name>
+            <parent-name>[shopping_trends.csv]</parent-name>
+            <remote-alias>Size</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Color</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Color (shopping_trends.csv)]</local-name>
+            <parent-name>[shopping_trends.csv]</parent-name>
+            <remote-alias>Color</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Season</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Season (shopping_trends.csv)]</local-name>
+            <parent-name>[shopping_trends.csv]</parent-name>
+            <remote-alias>Season</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Review Rating</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Review Rating (shopping_trends.csv)]</local-name>
+            <parent-name>[shopping_trends.csv]</parent-name>
+            <remote-alias>Review Rating</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Subscription Status</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Subscription Status (shopping_trends.csv)]</local-name>
+            <parent-name>[shopping_trends.csv]</parent-name>
+            <remote-alias>Subscription Status</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Payment Method</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Payment Method (shopping_trends.csv)]</local-name>
+            <parent-name>[shopping_trends.csv]</parent-name>
+            <remote-alias>Payment Method</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Shipping Type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Shipping Type (shopping_trends.csv)]</local-name>
+            <parent-name>[shopping_trends.csv]</parent-name>
+            <remote-alias>Shipping Type</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Discount Applied</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Discount Applied (shopping_trends.csv)]</local-name>
+            <parent-name>[shopping_trends.csv]</parent-name>
+            <remote-alias>Discount Applied</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Promo Code Used</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Promo Code Used (shopping_trends.csv)]</local-name>
+            <parent-name>[shopping_trends.csv]</parent-name>
+            <remote-alias>Promo Code Used</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Previous Purchases</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Previous Purchases (shopping_trends.csv)]</local-name>
+            <parent-name>[shopping_trends.csv]</parent-name>
+            <remote-alias>Previous Purchases</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Preferred Payment Method</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Preferred Payment Method]</local-name>
+            <parent-name>[shopping_trends.csv]</parent-name>
+            <remote-alias>Preferred Payment Method</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Frequency of Purchases</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Frequency of Purchases (shopping_trends.csv)]</local-name>
+            <parent-name>[shopping_trends.csv]</parent-name>
+            <remote-alias>Frequency of Purchases</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Age (shopping trends.csv)' datatype='integer' name='[Age (shopping_trends.csv)]' role='measure' type='quantitative' />
+      <column caption='Category (shopping trends.csv)' datatype='string' name='[Category (shopping_trends.csv)]' role='dimension' type='nominal' />
+      <column caption='Color (shopping trends.csv)' datatype='string' name='[Color (shopping_trends.csv)]' role='dimension' type='nominal' />
+      <column caption='Customer ID (shopping trends.csv)' datatype='integer' name='[Customer ID (shopping_trends.csv)]' role='dimension' type='ordinal' />
+      <column datatype='integer' name='[Customer ID]' role='dimension' type='ordinal' />
+      <column caption='Discount Applied (shopping trends.csv)' datatype='string' name='[Discount Applied (shopping_trends.csv)]' role='dimension' type='nominal' />
+      <column caption='Frequency of Purchases (shopping trends.csv)' datatype='string' name='[Frequency of Purchases (shopping_trends.csv)]' role='dimension' type='nominal' />
+      <column caption='Gender (shopping trends.csv)' datatype='string' name='[Gender (shopping_trends.csv)]' role='dimension' type='nominal' />
+      <column datatype='string' name='[Gender]' role='dimension' type='nominal' />
+      <column caption='Item Purchased (shopping trends.csv)' datatype='string' name='[Item Purchased (shopping_trends.csv)]' role='dimension' type='nominal' />
+      <column caption='Location (shopping trends.csv)' datatype='string' name='[Location (shopping_trends.csv)]' role='dimension' type='nominal' />
+      <column caption='Payment Method (shopping trends.csv)' datatype='string' name='[Payment Method (shopping_trends.csv)]' role='dimension' type='nominal' />
+      <column caption='Previous Purchases (shopping trends.csv)' datatype='integer' name='[Previous Purchases (shopping_trends.csv)]' role='measure' type='quantitative' />
+      <column caption='Promo Code Used (shopping trends.csv)' datatype='string' name='[Promo Code Used (shopping_trends.csv)]' role='dimension' type='nominal' />
+      <column caption='Purchase Amount (USD) (shopping trends.csv)' datatype='integer' name='[Purchase Amount (USD) (shopping_trends.csv)]' role='measure' type='quantitative' />
+      <column caption='Review Rating (shopping trends.csv)' datatype='real' name='[Review Rating (shopping_trends.csv)]' role='measure' type='quantitative' />
+      <column caption='Season (shopping trends.csv)' datatype='string' name='[Season (shopping_trends.csv)]' role='dimension' type='nominal' />
+      <column caption='Shipping Type (shopping trends.csv)' datatype='string' name='[Shipping Type (shopping_trends.csv)]' role='dimension' type='nominal' />
+      <column caption='Size (shopping trends.csv)' datatype='string' name='[Size (shopping_trends.csv)]' role='dimension' type='nominal' />
+      <column caption='Subscription Status (shopping trends.csv)' datatype='string' name='[Subscription Status (shopping_trends.csv)]' role='dimension' type='nominal' />
+      <column caption='shopping_behavior_updated.csv' datatype='table' name='[__tableau_internal_object_id__].[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98]' role='measure' type='quantitative' />
+      <column caption='shopping_trends.csv' datatype='table' name='[__tableau_internal_object_id__].[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22]' role='measure' type='quantitative' />
+      <column-instance column='[Gender]' derivation='None' name='[none:Gender:nk]' pivot='key' type='nominal' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_GB' class='hyper' dbname='C:/Users/Niko/AppData/Local/Temp/TableauTemp/#TableauTemp_0pq8dwi1gggp381aa31081u3e1pr.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='09/15/2025 01:30:55 PM' username='tableau_internal_user'>
+          <relation type='collection'>
+            <relation name='shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98' table='[Extract].[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98]' type='table' />
+            <relation name='shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22' table='[Extract].[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22]' type='table' />
+          </relation>
+          <cols>
+            <map key='[Age (shopping_trends.csv)]' value='[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22].[Age]' />
+            <map key='[Age]' value='[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98].[Age]' />
+            <map key='[Category (shopping_trends.csv)]' value='[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22].[Category]' />
+            <map key='[Category]' value='[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98].[Category]' />
+            <map key='[Color (shopping_trends.csv)]' value='[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22].[Color]' />
+            <map key='[Color]' value='[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98].[Color]' />
+            <map key='[Customer ID (shopping_trends.csv)]' value='[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22].[Customer ID]' />
+            <map key='[Customer ID]' value='[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98].[Customer ID]' />
+            <map key='[Discount Applied (shopping_trends.csv)]' value='[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22].[Discount Applied]' />
+            <map key='[Discount Applied]' value='[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98].[Discount Applied]' />
+            <map key='[Frequency of Purchases (shopping_trends.csv)]' value='[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22].[Frequency of Purchases]' />
+            <map key='[Frequency of Purchases]' value='[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98].[Frequency of Purchases]' />
+            <map key='[Gender (shopping_trends.csv)]' value='[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22].[Gender]' />
+            <map key='[Gender]' value='[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98].[Gender]' />
+            <map key='[Item Purchased (shopping_trends.csv)]' value='[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22].[Item Purchased]' />
+            <map key='[Item Purchased]' value='[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98].[Item Purchased]' />
+            <map key='[Location (shopping_trends.csv)]' value='[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22].[Location]' />
+            <map key='[Location]' value='[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98].[Location]' />
+            <map key='[Payment Method (shopping_trends.csv)]' value='[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22].[Payment Method]' />
+            <map key='[Payment Method]' value='[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98].[Payment Method]' />
+            <map key='[Preferred Payment Method]' value='[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22].[Preferred Payment Method]' />
+            <map key='[Previous Purchases (shopping_trends.csv)]' value='[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22].[Previous Purchases]' />
+            <map key='[Previous Purchases]' value='[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98].[Previous Purchases]' />
+            <map key='[Promo Code Used (shopping_trends.csv)]' value='[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22].[Promo Code Used]' />
+            <map key='[Promo Code Used]' value='[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98].[Promo Code Used]' />
+            <map key='[Purchase Amount (USD) (shopping_trends.csv)]' value='[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22].[Purchase Amount (USD)]' />
+            <map key='[Purchase Amount (USD)]' value='[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98].[Purchase Amount (USD)]' />
+            <map key='[Review Rating (shopping_trends.csv)]' value='[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22].[Review Rating]' />
+            <map key='[Review Rating]' value='[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98].[Review Rating]' />
+            <map key='[Season (shopping_trends.csv)]' value='[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22].[Season]' />
+            <map key='[Season]' value='[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98].[Season]' />
+            <map key='[Shipping Type (shopping_trends.csv)]' value='[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22].[Shipping Type]' />
+            <map key='[Shipping Type]' value='[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98].[Shipping Type]' />
+            <map key='[Size (shopping_trends.csv)]' value='[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22].[Size]' />
+            <map key='[Size]' value='[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98].[Size]' />
+            <map key='[Subscription Status (shopping_trends.csv)]' value='[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22].[Subscription Status]' />
+            <map key='[Subscription Status]' value='[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98].[Subscription Status]' />
+          </cols>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Customer ID</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Customer ID]</local-name>
+              <parent-name>[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98]</parent-name>
+              <remote-alias>Customer ID</remote-alias>
+              <ordinal>0</ordinal>
+              <family>shopping_behavior_updated.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3900</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Age</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Age]</local-name>
+              <parent-name>[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98]</parent-name>
+              <remote-alias>Age</remote-alias>
+              <ordinal>1</ordinal>
+              <family>shopping_behavior_updated.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>53</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Gender</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Gender]</local-name>
+              <parent-name>[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98]</parent-name>
+              <remote-alias>Gender</remote-alias>
+              <ordinal>2</ordinal>
+              <family>shopping_behavior_updated.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Item Purchased</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Item Purchased]</local-name>
+              <parent-name>[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98]</parent-name>
+              <remote-alias>Item Purchased</remote-alias>
+              <ordinal>3</ordinal>
+              <family>shopping_behavior_updated.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>25</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Category</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Category]</local-name>
+              <parent-name>[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98]</parent-name>
+              <remote-alias>Category</remote-alias>
+              <ordinal>4</ordinal>
+              <family>shopping_behavior_updated.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Purchase Amount (USD)</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Purchase Amount (USD)]</local-name>
+              <parent-name>[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98]</parent-name>
+              <remote-alias>Purchase Amount (USD)</remote-alias>
+              <ordinal>5</ordinal>
+              <family>shopping_behavior_updated.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>81</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Location</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Location]</local-name>
+              <parent-name>[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98]</parent-name>
+              <remote-alias>Location</remote-alias>
+              <ordinal>6</ordinal>
+              <family>shopping_behavior_updated.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>50</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Size</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Size]</local-name>
+              <parent-name>[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98]</parent-name>
+              <remote-alias>Size</remote-alias>
+              <ordinal>7</ordinal>
+              <family>shopping_behavior_updated.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Color</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Color]</local-name>
+              <parent-name>[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98]</parent-name>
+              <remote-alias>Color</remote-alias>
+              <ordinal>8</ordinal>
+              <family>shopping_behavior_updated.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>25</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Season</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Season]</local-name>
+              <parent-name>[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98]</parent-name>
+              <remote-alias>Season</remote-alias>
+              <ordinal>9</ordinal>
+              <family>shopping_behavior_updated.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Review Rating</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Review Rating]</local-name>
+              <parent-name>[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98]</parent-name>
+              <remote-alias>Review Rating</remote-alias>
+              <ordinal>10</ordinal>
+              <family>shopping_behavior_updated.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>26</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Subscription Status</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Subscription Status]</local-name>
+              <parent-name>[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98]</parent-name>
+              <remote-alias>Subscription Status</remote-alias>
+              <ordinal>11</ordinal>
+              <family>shopping_behavior_updated.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Shipping Type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Shipping Type]</local-name>
+              <parent-name>[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98]</parent-name>
+              <remote-alias>Shipping Type</remote-alias>
+              <ordinal>12</ordinal>
+              <family>shopping_behavior_updated.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Discount Applied</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Discount Applied]</local-name>
+              <parent-name>[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98]</parent-name>
+              <remote-alias>Discount Applied</remote-alias>
+              <ordinal>13</ordinal>
+              <family>shopping_behavior_updated.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Promo Code Used</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Promo Code Used]</local-name>
+              <parent-name>[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98]</parent-name>
+              <remote-alias>Promo Code Used</remote-alias>
+              <ordinal>14</ordinal>
+              <family>shopping_behavior_updated.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Previous Purchases</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Previous Purchases]</local-name>
+              <parent-name>[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98]</parent-name>
+              <remote-alias>Previous Purchases</remote-alias>
+              <ordinal>15</ordinal>
+              <family>shopping_behavior_updated.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>50</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Payment Method</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Payment Method]</local-name>
+              <parent-name>[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98]</parent-name>
+              <remote-alias>Payment Method</remote-alias>
+              <ordinal>16</ordinal>
+              <family>shopping_behavior_updated.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Frequency of Purchases</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Frequency of Purchases]</local-name>
+              <parent-name>[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98]</parent-name>
+              <remote-alias>Frequency of Purchases</remote-alias>
+              <ordinal>17</ordinal>
+              <family>shopping_behavior_updated.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Customer ID</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Customer ID (shopping_trends.csv)]</local-name>
+              <parent-name>[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22]</parent-name>
+              <remote-alias>Customer ID</remote-alias>
+              <ordinal>18</ordinal>
+              <family>shopping_trends.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3900</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Age</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Age (shopping_trends.csv)]</local-name>
+              <parent-name>[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22]</parent-name>
+              <remote-alias>Age</remote-alias>
+              <ordinal>19</ordinal>
+              <family>shopping_trends.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>53</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Gender</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Gender (shopping_trends.csv)]</local-name>
+              <parent-name>[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22]</parent-name>
+              <remote-alias>Gender</remote-alias>
+              <ordinal>20</ordinal>
+              <family>shopping_trends.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Item Purchased</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Item Purchased (shopping_trends.csv)]</local-name>
+              <parent-name>[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22]</parent-name>
+              <remote-alias>Item Purchased</remote-alias>
+              <ordinal>21</ordinal>
+              <family>shopping_trends.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>25</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Category</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Category (shopping_trends.csv)]</local-name>
+              <parent-name>[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22]</parent-name>
+              <remote-alias>Category</remote-alias>
+              <ordinal>22</ordinal>
+              <family>shopping_trends.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Purchase Amount (USD)</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Purchase Amount (USD) (shopping_trends.csv)]</local-name>
+              <parent-name>[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22]</parent-name>
+              <remote-alias>Purchase Amount (USD)</remote-alias>
+              <ordinal>23</ordinal>
+              <family>shopping_trends.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>81</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Location</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Location (shopping_trends.csv)]</local-name>
+              <parent-name>[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22]</parent-name>
+              <remote-alias>Location</remote-alias>
+              <ordinal>24</ordinal>
+              <family>shopping_trends.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>50</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Size</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Size (shopping_trends.csv)]</local-name>
+              <parent-name>[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22]</parent-name>
+              <remote-alias>Size</remote-alias>
+              <ordinal>25</ordinal>
+              <family>shopping_trends.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Color</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Color (shopping_trends.csv)]</local-name>
+              <parent-name>[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22]</parent-name>
+              <remote-alias>Color</remote-alias>
+              <ordinal>26</ordinal>
+              <family>shopping_trends.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>25</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Season</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Season (shopping_trends.csv)]</local-name>
+              <parent-name>[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22]</parent-name>
+              <remote-alias>Season</remote-alias>
+              <ordinal>27</ordinal>
+              <family>shopping_trends.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Review Rating</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Review Rating (shopping_trends.csv)]</local-name>
+              <parent-name>[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22]</parent-name>
+              <remote-alias>Review Rating</remote-alias>
+              <ordinal>28</ordinal>
+              <family>shopping_trends.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>26</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Subscription Status</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Subscription Status (shopping_trends.csv)]</local-name>
+              <parent-name>[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22]</parent-name>
+              <remote-alias>Subscription Status</remote-alias>
+              <ordinal>29</ordinal>
+              <family>shopping_trends.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Payment Method</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Payment Method (shopping_trends.csv)]</local-name>
+              <parent-name>[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22]</parent-name>
+              <remote-alias>Payment Method</remote-alias>
+              <ordinal>30</ordinal>
+              <family>shopping_trends.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Shipping Type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Shipping Type (shopping_trends.csv)]</local-name>
+              <parent-name>[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22]</parent-name>
+              <remote-alias>Shipping Type</remote-alias>
+              <ordinal>31</ordinal>
+              <family>shopping_trends.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Discount Applied</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Discount Applied (shopping_trends.csv)]</local-name>
+              <parent-name>[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22]</parent-name>
+              <remote-alias>Discount Applied</remote-alias>
+              <ordinal>32</ordinal>
+              <family>shopping_trends.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Promo Code Used</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Promo Code Used (shopping_trends.csv)]</local-name>
+              <parent-name>[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22]</parent-name>
+              <remote-alias>Promo Code Used</remote-alias>
+              <ordinal>33</ordinal>
+              <family>shopping_trends.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Previous Purchases</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Previous Purchases (shopping_trends.csv)]</local-name>
+              <parent-name>[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22]</parent-name>
+              <remote-alias>Previous Purchases</remote-alias>
+              <ordinal>34</ordinal>
+              <family>shopping_trends.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>50</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Preferred Payment Method</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Preferred Payment Method]</local-name>
+              <parent-name>[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22]</parent-name>
+              <remote-alias>Preferred Payment Method</remote-alias>
+              <ordinal>35</ordinal>
+              <family>shopping_trends.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Frequency of Purchases</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Frequency of Purchases (shopping_trends.csv)]</local-name>
+              <parent-name>[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22]</parent-name>
+              <remote-alias>Frequency of Purchases</remote-alias>
+              <ordinal>36</ordinal>
+              <family>shopping_trends.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Gender:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Male&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;Female&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United Kingdom&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <object-graph>
+        <objects>
+          <object caption='shopping_behavior_updated.csv' id='shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98'>
+            <properties context=''>
+              <relation connection='textscan.1pd9oic0acod8o1gmaz3c07c5yuy' name='shopping_behavior_updated.csv' table='[shopping_behavior_updated#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+                  <column datatype='integer' name='Customer ID' ordinal='0' />
+                  <column datatype='integer' name='Age' ordinal='1' />
+                  <column datatype='string' name='Gender' ordinal='2' />
+                  <column datatype='string' name='Item Purchased' ordinal='3' />
+                  <column datatype='string' name='Category' ordinal='4' />
+                  <column datatype='integer' name='Purchase Amount (USD)' ordinal='5' />
+                  <column datatype='string' name='Location' ordinal='6' />
+                  <column datatype='string' name='Size' ordinal='7' />
+                  <column datatype='string' name='Color' ordinal='8' />
+                  <column datatype='string' name='Season' ordinal='9' />
+                  <column datatype='real' name='Review Rating' ordinal='10' />
+                  <column datatype='string' name='Subscription Status' ordinal='11' />
+                  <column datatype='string' name='Shipping Type' ordinal='12' />
+                  <column datatype='string' name='Discount Applied' ordinal='13' />
+                  <column datatype='string' name='Promo Code Used' ordinal='14' />
+                  <column datatype='integer' name='Previous Purchases' ordinal='15' />
+                  <column datatype='string' name='Payment Method' ordinal='16' />
+                  <column datatype='string' name='Frequency of Purchases' ordinal='17' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98' table='[Extract].[shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98]' type='table' />
+            </properties>
+          </object>
+          <object caption='shopping_trends.csv' id='shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22'>
+            <properties context=''>
+              <relation connection='textscan.1pd9oic0acod8o1gmaz3c07c5yuy' name='shopping_trends.csv' table='[shopping_trends#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+                  <column datatype='integer' name='Customer ID' ordinal='0' />
+                  <column datatype='integer' name='Age' ordinal='1' />
+                  <column datatype='string' name='Gender' ordinal='2' />
+                  <column datatype='string' name='Item Purchased' ordinal='3' />
+                  <column datatype='string' name='Category' ordinal='4' />
+                  <column datatype='integer' name='Purchase Amount (USD)' ordinal='5' />
+                  <column datatype='string' name='Location' ordinal='6' />
+                  <column datatype='string' name='Size' ordinal='7' />
+                  <column datatype='string' name='Color' ordinal='8' />
+                  <column datatype='string' name='Season' ordinal='9' />
+                  <column datatype='real' name='Review Rating' ordinal='10' />
+                  <column datatype='string' name='Subscription Status' ordinal='11' />
+                  <column datatype='string' name='Payment Method' ordinal='12' />
+                  <column datatype='string' name='Shipping Type' ordinal='13' />
+                  <column datatype='string' name='Discount Applied' ordinal='14' />
+                  <column datatype='string' name='Promo Code Used' ordinal='15' />
+                  <column datatype='integer' name='Previous Purchases' ordinal='16' />
+                  <column datatype='string' name='Preferred Payment Method' ordinal='17' />
+                  <column datatype='string' name='Frequency of Purchases' ordinal='18' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22' table='[Extract].[shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[Gender]' />
+              <expression op='[Frequency of Purchases (shopping_trends.csv)]' />
+            </expression>
+            <first-end-point object-id='shopping_behavior_updated.csv_52D628FF95924E30B3A7B59A11D98F98' />
+            <second-end-point object-id='shopping_trends.csv_CE331DC6F45D4AC18A939C7E6375AC22' />
+          </relationship>
+        </relationships>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Practice1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Item purchase frequency by gender and category
+</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='shopping_behavior_updated+' name='federated.0hq2p9k1p0lc6d1gvylsm02l0557' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0hq2p9k1p0lc6d1gvylsm02l0557'>
+            <column datatype='string' name='[Category]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Gender]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Item Purchased]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Purchase Amount (USD)]' role='measure' type='quantitative' />
+            <column-instance column='[Category]' derivation='None' name='[none:Category:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Gender]' derivation='None' name='[none:Gender:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Item Purchased]' derivation='None' name='[none:Item Purchased:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Purchase Amount (USD)]' derivation='Sum' name='[sum:Purchase Amount (USD):qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.0hq2p9k1p0lc6d1gvylsm02l0557].[none:Item Purchased:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0hq2p9k1p0lc6d1gvylsm02l0557].[sum:Purchase Amount (USD):qk]' shelf='columns' />
+          </shelf-sorts>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='width' field='[federated.0hq2p9k1p0lc6d1gvylsm02l0557].[sum:Purchase Amount (USD):qk]' value='40' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0hq2p9k1p0lc6d1gvylsm02l0557].[none:Gender:nk]' />
+              <text column='[federated.0hq2p9k1p0lc6d1gvylsm02l0557].[sum:Purchase Amount (USD):qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.0hq2p9k1p0lc6d1gvylsm02l0557].[none:Gender:nk] * [federated.0hq2p9k1p0lc6d1gvylsm02l0557].[sum:Purchase Amount (USD):qk])</rows>
+        <cols>([federated.0hq2p9k1p0lc6d1gvylsm02l0557].[none:Category:nk] / [federated.0hq2p9k1p0lc6d1gvylsm02l0557].[none:Item Purchased:nk])</cols>
+      </table>
+      <simple-id uuid='{F577096D-8AAF-465C-B8CA-236A226FC385}' />
+    </worksheet>
+    <worksheet name='Practice2'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Rating by season and category</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='shopping_behavior_updated+' name='federated.0hq2p9k1p0lc6d1gvylsm02l0557' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0hq2p9k1p0lc6d1gvylsm02l0557'>
+            <column datatype='string' name='[Category]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Gender]' role='dimension' type='nominal' />
+            <column datatype='real' name='[Review Rating]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Season]' role='dimension' type='nominal' />
+            <column-instance column='[Review Rating]' derivation='Avg' name='[avg:Review Rating:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Category]' derivation='None' name='[none:Category:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Gender]' derivation='None' name='[none:Gender:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Season]' derivation='None' name='[none:Season:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.0hq2p9k1p0lc6d1gvylsm02l0557].[none:Gender:nk]' value='90' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='height' field='[federated.0hq2p9k1p0lc6d1gvylsm02l0557].[none:Category:nk]' value='60' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <size column='[federated.0hq2p9k1p0lc6d1gvylsm02l0557].[none:Category:nk]' />
+              <color column='[federated.0hq2p9k1p0lc6d1gvylsm02l0557].[none:Gender:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.0hq2p9k1p0lc6d1gvylsm02l0557].[none:Season:nk] * [federated.0hq2p9k1p0lc6d1gvylsm02l0557].[avg:Review Rating:qk])</rows>
+        <cols>([federated.0hq2p9k1p0lc6d1gvylsm02l0557].[none:Category:nk] / [federated.0hq2p9k1p0lc6d1gvylsm02l0557].[none:Gender:nk])</cols>
+      </table>
+      <simple-id uuid='{508B29BE-F82B-4175-9C3B-D0E333E48062}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <style />
+      <size sizing-mode='automatic' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='89467' id='7' param='horz' type-v2='layout-flow' w='99068' x='466' y='9607'>
+            <zone h='89467' id='5' type-v2='layout-basic' w='60140' x='466' y='9607'>
+              <zone h='89467' id='3' name='Practice1' w='45455' x='466' y='9607'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='89467' id='12' is-centered='0' is-scaled='1' param='E:/Mykola&apos;s stuff/Memes/Images/Cute cat 2.jpg' type-v2='bitmap' w='14685' x='45921' y='9607'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone fixed-size='668' h='89467' id='6' is-fixed='true' param='vert' type-v2='layout-flow' w='38928' x='60606' y='9607'>
+              <zone h='77198' id='9' name='Practice2' w='38928' x='60606' y='9607'>
+                <layout-cache cell-count-w='8' minheight='545' non-cell-size-w='136' type-h='scalable' type-w='cell' />
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='12269' id='10' name='Practice2' pane-specification-id='0' param='[federated.0hq2p9k1p0lc6d1gvylsm02l0557].[none:Category:nk]' type-v2='size' w='38928' x='60606' y='86805'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone h='8681' id='11' type-v2='layout-flow' w='99068' x='466' y='926'>
+            <zone h='7639' id='8' name='Practice1' pane-specification-id='2' param='[federated.0hq2p9k1p0lc6d1gvylsm02l0557].[none:Gender:nk]' type-v2='color' w='99068' x='466' y='926'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1000' minheight='1000' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='14' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98148' id='13' param='vert' type-v2='layout-flow' w='99068' x='466' y='926'>
+                <zone fixed-size='280' h='89467' id='3' is-fixed='true' name='Practice1' w='45455' x='466' y='9607'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='7639' id='8' name='Practice1' pane-specification-id='2' param='[federated.0hq2p9k1p0lc6d1gvylsm02l0557].[none:Gender:nk]' type-v2='color' w='99068' x='466' y='926'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='89467' id='12' is-centered='0' is-fixed='true' is-scaled='1' param='E:/Mykola&apos;s stuff/Memes/Images/Cute cat 2.jpg' type-v2='bitmap' w='14685' x='45921' y='9607'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='77198' id='9' is-fixed='true' name='Practice2' w='38928' x='60606' y='9607'>
+                  <layout-cache cell-count-w='8' minheight='545' non-cell-size-w='136' type-h='scalable' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='12269' id='10' name='Practice2' pane-specification-id='0' param='[federated.0hq2p9k1p0lc6d1gvylsm02l0557].[none:Category:nk]' type-v2='size' w='38928' x='60606' y='86805'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{ACD2BF52-9391-4E2B-8CF8-844AE1E22578}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='Practice1'>
+      <cards>
+        <edge name='left'>
+          <strip size='199'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='2' param='[federated.0hq2p9k1p0lc6d1gvylsm02l0557].[none:Gender:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='fit-width' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.0hq2p9k1p0lc6d1gvylsm02l0557].[none:Category (shopping_trends.csv):nk]</field>
+            <field>[federated.0hq2p9k1p0lc6d1gvylsm02l0557].[none:Category:nk]</field>
+            <field>[federated.0hq2p9k1p0lc6d1gvylsm02l0557].[none:Discount Applied:nk]</field>
+            <field>[federated.0hq2p9k1p0lc6d1gvylsm02l0557].[none:Frequency of Purchases:nk]</field>
+            <field>[federated.0hq2p9k1p0lc6d1gvylsm02l0557].[none:Gender:nk]</field>
+            <field>[federated.0hq2p9k1p0lc6d1gvylsm02l0557].[none:Item Purchased:nk]</field>
+            <field>[federated.0hq2p9k1p0lc6d1gvylsm02l0557].[none:Season:nk]</field>
+            <field>[federated.0hq2p9k1p0lc6d1gvylsm02l0557].[sum:Age:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{5C3A1213-2FD9-4B34-BD9A-5DA08D92A416}' />
+    </window>
+    <window class='worksheet' name='Practice2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0hq2p9k1p0lc6d1gvylsm02l0557].[none:Gender:nk]' type='color' />
+            <card pane-specification-id='0' param='[federated.0hq2p9k1p0lc6d1gvylsm02l0557].[none:Category:nk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0hq2p9k1p0lc6d1gvylsm02l0557].[none:Category:nk]</field>
+            <field>[federated.0hq2p9k1p0lc6d1gvylsm02l0557].[none:Frequency of Purchases:nk]</field>
+            <field>[federated.0hq2p9k1p0lc6d1gvylsm02l0557].[none:Gender:nk]</field>
+            <field>[federated.0hq2p9k1p0lc6d1gvylsm02l0557].[none:Location:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{8EB6A275-21B1-418A-8B12-599D83D477B7}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Practice1'>
+          <zoom type='entire-view' />
+          <highlight>
+            <color-one-way>
+              <field>[federated.0hq2p9k1p0lc6d1gvylsm02l0557].[none:Gender:nk]</field>
+            </color-one-way>
+          </highlight>
+        </viewpoint>
+        <viewpoint name='Practice2'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='12' />
+      <simple-id uuid='{6EFFD0ED-65BB-4808-89C0-6C2E81F056D6}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Dashboard 1' width='192'>
+      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
+      MeuFEAiOj/8PLSRvwDxpNsMAAAAASUVORK5CYII=
+    </thumbnail>
+    <thumbnail height='192' name='Practice1' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Practice2' width='192'>
+      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
+      cE/UxK7pAAAAAABJRU5ErkJggg==
+    </thumbnail>
+  </thumbnails>
+</workbook>

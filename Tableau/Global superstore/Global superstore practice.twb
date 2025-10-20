@@ -1,0 +1,2464 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20252.25.0818.1050                               -->
+<workbook original-version='18.1' source-build='2025.2.2 (20252.25.0818.1050)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Orders+ (Superstore_Demo)' inline='true' name='federated.0gbbj6s06kupmg1332wfq111fscw' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Superstore_Demo' name='excel-direct.17pq89w1cm9f041ba5kva08jtheh'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='E:/Mykola&apos;s stuff/Other/Tableau/Global superstore/Superstore_Demo.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation type='collection'>
+          <relation connection='excel-direct.17pq89w1cm9f041ba5kva08jtheh' name='Orders' table='[Orders$]' type='table'>
+            <columns gridOrigin='A1:U9995:no:A1:U9995:0' header='yes' outcome='6'>
+              <column datatype='integer' name='Row ID' ordinal='0' />
+              <column datatype='string' name='Order ID' ordinal='1' />
+              <column datatype='date' name='Order Date' ordinal='2' />
+              <column datatype='date' name='Ship Date' ordinal='3' />
+              <column datatype='string' name='Ship Mode' ordinal='4' />
+              <column datatype='string' name='Customer ID' ordinal='5' />
+              <column datatype='string' name='Customer Name' ordinal='6' />
+              <column datatype='string' name='Segment' ordinal='7' />
+              <column datatype='string' name='Country' ordinal='8' />
+              <column datatype='string' name='City' ordinal='9' />
+              <column datatype='string' name='State' ordinal='10' />
+              <column datatype='integer' name='Postal Code' ordinal='11' />
+              <column datatype='string' name='Region' ordinal='12' />
+              <column datatype='string' name='Product ID' ordinal='13' />
+              <column datatype='string' name='Category' ordinal='14' />
+              <column datatype='string' name='Sub-Category' ordinal='15' />
+              <column datatype='string' name='Product Name' ordinal='16' />
+              <column datatype='real' name='Sales' ordinal='17' />
+              <column datatype='integer' name='Quantity' ordinal='18' />
+              <column datatype='real' name='Discount' ordinal='19' />
+              <column datatype='real' name='Profit' ordinal='20' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.17pq89w1cm9f041ba5kva08jtheh' name='People' table='[People$]' type='table'>
+            <columns gridOrigin='A1:B5:no:A1:B5:0' header='yes' outcome='6'>
+              <column datatype='string' name='Person' ordinal='0' />
+              <column datatype='string' name='Region' ordinal='1' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.17pq89w1cm9f041ba5kva08jtheh' name='Returns' table='[Returns$]' type='table'>
+            <columns gridOrigin='A1:B297:no:A1:B297:0' header='yes' outcome='6'>
+              <column datatype='string' name='Returned' ordinal='0' />
+              <column datatype='string' name='Order ID' ordinal='1' />
+            </columns>
+          </relation>
+        </relation>
+        <cols>
+          <map key='[Category]' value='[Orders].[Category]' />
+          <map key='[City]' value='[Orders].[City]' />
+          <map key='[Country]' value='[Orders].[Country]' />
+          <map key='[Customer ID]' value='[Orders].[Customer ID]' />
+          <map key='[Customer Name]' value='[Orders].[Customer Name]' />
+          <map key='[Discount]' value='[Orders].[Discount]' />
+          <map key='[Order Date]' value='[Orders].[Order Date]' />
+          <map key='[Order ID (Returns)]' value='[Returns].[Order ID]' />
+          <map key='[Order ID]' value='[Orders].[Order ID]' />
+          <map key='[Person]' value='[People].[Person]' />
+          <map key='[Postal Code]' value='[Orders].[Postal Code]' />
+          <map key='[Product ID]' value='[Orders].[Product ID]' />
+          <map key='[Product Name]' value='[Orders].[Product Name]' />
+          <map key='[Profit]' value='[Orders].[Profit]' />
+          <map key='[Quantity]' value='[Orders].[Quantity]' />
+          <map key='[Region (People)]' value='[People].[Region]' />
+          <map key='[Region]' value='[Orders].[Region]' />
+          <map key='[Returned]' value='[Returns].[Returned]' />
+          <map key='[Row ID]' value='[Orders].[Row ID]' />
+          <map key='[Sales]' value='[Orders].[Sales]' />
+          <map key='[Segment]' value='[Orders].[Segment]' />
+          <map key='[Ship Date]' value='[Orders].[Ship Date]' />
+          <map key='[Ship Mode]' value='[Orders].[Ship Mode]' />
+          <map key='[State]' value='[Orders].[State]' />
+          <map key='[Sub-Category]' value='[Orders].[Sub-Category]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Orders]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:U9995:no:A1:U9995:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[People]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:B5:no:A1:B5:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Returns]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:B297:no:A1:B297:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Row ID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Row ID]</local-name>
+            <parent-name>[Orders]</parent-name>
+            <remote-alias>Row ID</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Orders_FFBB6078FF8D4F11BD65A359657AED5B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Order ID</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Order ID]</local-name>
+            <parent-name>[Orders]</parent-name>
+            <remote-alias>Order ID</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RGB_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Orders_FFBB6078FF8D4F11BD65A359657AED5B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Order Date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[Order Date]</local-name>
+            <parent-name>[Orders]</parent-name>
+            <remote-alias>Order Date</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+            <object-id>[Orders_FFBB6078FF8D4F11BD65A359657AED5B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Ship Date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[Ship Date]</local-name>
+            <parent-name>[Orders]</parent-name>
+            <remote-alias>Ship Date</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+            <object-id>[Orders_FFBB6078FF8D4F11BD65A359657AED5B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Ship Mode</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Ship Mode]</local-name>
+            <parent-name>[Orders]</parent-name>
+            <remote-alias>Ship Mode</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RGB_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Orders_FFBB6078FF8D4F11BD65A359657AED5B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Customer ID</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Customer ID]</local-name>
+            <parent-name>[Orders]</parent-name>
+            <remote-alias>Customer ID</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RGB_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Orders_FFBB6078FF8D4F11BD65A359657AED5B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Customer Name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Customer Name]</local-name>
+            <parent-name>[Orders]</parent-name>
+            <remote-alias>Customer Name</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RGB_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Orders_FFBB6078FF8D4F11BD65A359657AED5B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Segment</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Segment]</local-name>
+            <parent-name>[Orders]</parent-name>
+            <remote-alias>Segment</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RGB_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Orders_FFBB6078FF8D4F11BD65A359657AED5B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Country</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Country]</local-name>
+            <parent-name>[Orders]</parent-name>
+            <remote-alias>Country</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RGB_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Orders_FFBB6078FF8D4F11BD65A359657AED5B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>City</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[City]</local-name>
+            <parent-name>[Orders]</parent-name>
+            <remote-alias>City</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RGB_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Orders_FFBB6078FF8D4F11BD65A359657AED5B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>State</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[State]</local-name>
+            <parent-name>[Orders]</parent-name>
+            <remote-alias>State</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RGB_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Orders_FFBB6078FF8D4F11BD65A359657AED5B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Postal Code</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Postal Code]</local-name>
+            <parent-name>[Orders]</parent-name>
+            <remote-alias>Postal Code</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Orders_FFBB6078FF8D4F11BD65A359657AED5B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Region</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Region]</local-name>
+            <parent-name>[Orders]</parent-name>
+            <remote-alias>Region</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RGB_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Orders_FFBB6078FF8D4F11BD65A359657AED5B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Product ID</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Product ID]</local-name>
+            <parent-name>[Orders]</parent-name>
+            <remote-alias>Product ID</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RGB_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Orders_FFBB6078FF8D4F11BD65A359657AED5B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Category</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Category]</local-name>
+            <parent-name>[Orders]</parent-name>
+            <remote-alias>Category</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RGB_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Orders_FFBB6078FF8D4F11BD65A359657AED5B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sub-Category</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Sub-Category]</local-name>
+            <parent-name>[Orders]</parent-name>
+            <remote-alias>Sub-Category</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RGB_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Orders_FFBB6078FF8D4F11BD65A359657AED5B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Product Name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Product Name]</local-name>
+            <parent-name>[Orders]</parent-name>
+            <remote-alias>Product Name</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RGB_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Orders_FFBB6078FF8D4F11BD65A359657AED5B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sales</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Sales]</local-name>
+            <parent-name>[Orders]</parent-name>
+            <remote-alias>Sales</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Orders_FFBB6078FF8D4F11BD65A359657AED5B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Quantity</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Quantity]</local-name>
+            <parent-name>[Orders]</parent-name>
+            <remote-alias>Quantity</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Orders_FFBB6078FF8D4F11BD65A359657AED5B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Discount</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Discount]</local-name>
+            <parent-name>[Orders]</parent-name>
+            <remote-alias>Discount</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Orders_FFBB6078FF8D4F11BD65A359657AED5B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Profit</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Profit]</local-name>
+            <parent-name>[Orders]</parent-name>
+            <remote-alias>Profit</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Orders_FFBB6078FF8D4F11BD65A359657AED5B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Person</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Person]</local-name>
+            <parent-name>[People]</parent-name>
+            <remote-alias>Person</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RGB_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[People_208B103FA4284EFF98251968CD708DD8]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Region</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Region (People)]</local-name>
+            <parent-name>[People]</parent-name>
+            <remote-alias>Region</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RGB_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[People_208B103FA4284EFF98251968CD708DD8]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Returned</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Returned]</local-name>
+            <parent-name>[Returns]</parent-name>
+            <remote-alias>Returned</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RGB_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Returns_CD555AB0AA25496CBE3D85095361E163]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Order ID</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Order ID (Returns)]</local-name>
+            <parent-name>[Returns]</parent-name>
+            <remote-alias>Order ID</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RGB_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Returns_CD555AB0AA25496CBE3D85095361E163]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Profit Margin' datatype='real' default-format='p0%' name='[Calculation_1622140344783699968]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Profit]/[Sales]' />
+      </column>
+      <column caption='Net Pay' datatype='real' name='[Calculation_1622140344786583553]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Sales]*(1-0.55)' />
+      </column>
+      <column datatype='string' name='[City]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column aggregation='Sum' datatype='integer' default-format='*00000' name='[Postal Code]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+      <column datatype='integer' name='[Row ID]' role='dimension' type='ordinal' />
+      <column aggregation='None' caption='Sales (bin)' datatype='integer' name='[Sales (bin)]' role='dimension' type='ordinal'>
+        <calculation class='bin' decimals='1' formula='[Sales]' peg='0' size='45' />
+      </column>
+      <column datatype='real' name='[Sales]' role='measure' type='quantitative' />
+      <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column caption='Orders' datatype='table' name='[__tableau_internal_object_id__].[Orders_FFBB6078FF8D4F11BD65A359657AED5B]' role='measure' type='quantitative' />
+      <column caption='People' datatype='table' name='[__tableau_internal_object_id__].[People_208B103FA4284EFF98251968CD708DD8]' role='measure' type='quantitative' />
+      <column caption='Returns' datatype='table' name='[__tableau_internal_object_id__].[Returns_CD555AB0AA25496CBE3D85095361E163]' role='measure' type='quantitative' />
+      <column-instance column='[Forecast Indicator]' derivation='None' forecast-column-base='[Forecast Indicator]' forecast-column-type='forecast-indicator' name='[none:Forecast Indicator:nk]' pivot='key' type='nominal' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_GB' class='hyper' dbname='C:/Users/Niko/AppData/Local/Temp/TableauTemp/#TableauTemp_1hdy5tx13c6pjc16ymlhw04cfb1o.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='09/16/2025 09:08:00 AM' username='tableau_internal_user'>
+          <relation type='collection'>
+            <relation name='Orders_FFBB6078FF8D4F11BD65A359657AED5B' table='[Extract].[Orders_FFBB6078FF8D4F11BD65A359657AED5B]' type='table' />
+            <relation name='People_208B103FA4284EFF98251968CD708DD8' table='[Extract].[People_208B103FA4284EFF98251968CD708DD8]' type='table' />
+            <relation name='Returns_CD555AB0AA25496CBE3D85095361E163' table='[Extract].[Returns_CD555AB0AA25496CBE3D85095361E163]' type='table' />
+          </relation>
+          <cols>
+            <map key='[Category]' value='[Orders_FFBB6078FF8D4F11BD65A359657AED5B].[Category]' />
+            <map key='[City]' value='[Orders_FFBB6078FF8D4F11BD65A359657AED5B].[City]' />
+            <map key='[Country]' value='[Orders_FFBB6078FF8D4F11BD65A359657AED5B].[Country]' />
+            <map key='[Customer ID]' value='[Orders_FFBB6078FF8D4F11BD65A359657AED5B].[Customer ID]' />
+            <map key='[Customer Name]' value='[Orders_FFBB6078FF8D4F11BD65A359657AED5B].[Customer Name]' />
+            <map key='[Discount]' value='[Orders_FFBB6078FF8D4F11BD65A359657AED5B].[Discount]' />
+            <map key='[Order Date]' value='[Orders_FFBB6078FF8D4F11BD65A359657AED5B].[Order Date]' />
+            <map key='[Order ID (Returns)]' value='[Returns_CD555AB0AA25496CBE3D85095361E163].[Order ID]' />
+            <map key='[Order ID]' value='[Orders_FFBB6078FF8D4F11BD65A359657AED5B].[Order ID]' />
+            <map key='[Person]' value='[People_208B103FA4284EFF98251968CD708DD8].[Person]' />
+            <map key='[Postal Code]' value='[Orders_FFBB6078FF8D4F11BD65A359657AED5B].[Postal Code]' />
+            <map key='[Product ID]' value='[Orders_FFBB6078FF8D4F11BD65A359657AED5B].[Product ID]' />
+            <map key='[Product Name]' value='[Orders_FFBB6078FF8D4F11BD65A359657AED5B].[Product Name]' />
+            <map key='[Profit]' value='[Orders_FFBB6078FF8D4F11BD65A359657AED5B].[Profit]' />
+            <map key='[Quantity]' value='[Orders_FFBB6078FF8D4F11BD65A359657AED5B].[Quantity]' />
+            <map key='[Region (People)]' value='[People_208B103FA4284EFF98251968CD708DD8].[Region]' />
+            <map key='[Region]' value='[Orders_FFBB6078FF8D4F11BD65A359657AED5B].[Region]' />
+            <map key='[Returned]' value='[Returns_CD555AB0AA25496CBE3D85095361E163].[Returned]' />
+            <map key='[Row ID]' value='[Orders_FFBB6078FF8D4F11BD65A359657AED5B].[Row ID]' />
+            <map key='[Sales]' value='[Orders_FFBB6078FF8D4F11BD65A359657AED5B].[Sales]' />
+            <map key='[Segment]' value='[Orders_FFBB6078FF8D4F11BD65A359657AED5B].[Segment]' />
+            <map key='[Ship Date]' value='[Orders_FFBB6078FF8D4F11BD65A359657AED5B].[Ship Date]' />
+            <map key='[Ship Mode]' value='[Orders_FFBB6078FF8D4F11BD65A359657AED5B].[Ship Mode]' />
+            <map key='[State]' value='[Orders_FFBB6078FF8D4F11BD65A359657AED5B].[State]' />
+            <map key='[Sub-Category]' value='[Orders_FFBB6078FF8D4F11BD65A359657AED5B].[Sub-Category]' />
+          </cols>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Row ID</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Row ID]</local-name>
+              <parent-name>[Orders_FFBB6078FF8D4F11BD65A359657AED5B]</parent-name>
+              <remote-alias>Row ID</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Orders</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>9994</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Orders_FFBB6078FF8D4F11BD65A359657AED5B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Order ID</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Order ID]</local-name>
+              <parent-name>[Orders_FFBB6078FF8D4F11BD65A359657AED5B]</parent-name>
+              <remote-alias>Order ID</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Orders</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3173</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RGB_S2' />
+              <object-id>[Orders_FFBB6078FF8D4F11BD65A359657AED5B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Order Date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Order Date]</local-name>
+              <parent-name>[Orders_FFBB6078FF8D4F11BD65A359657AED5B]</parent-name>
+              <remote-alias>Order Date</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Orders</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>1392</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Orders_FFBB6078FF8D4F11BD65A359657AED5B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Ship Date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Ship Date]</local-name>
+              <parent-name>[Orders_FFBB6078FF8D4F11BD65A359657AED5B]</parent-name>
+              <remote-alias>Ship Date</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Orders</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>1487</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Orders_FFBB6078FF8D4F11BD65A359657AED5B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Ship Mode</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Ship Mode]</local-name>
+              <parent-name>[Orders_FFBB6078FF8D4F11BD65A359657AED5B]</parent-name>
+              <remote-alias>Ship Mode</remote-alias>
+              <ordinal>4</ordinal>
+              <family>Orders</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RGB_S2' />
+              <object-id>[Orders_FFBB6078FF8D4F11BD65A359657AED5B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Customer ID</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Customer ID]</local-name>
+              <parent-name>[Orders_FFBB6078FF8D4F11BD65A359657AED5B]</parent-name>
+              <remote-alias>Customer ID</remote-alias>
+              <ordinal>5</ordinal>
+              <family>Orders</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1048</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RGB_S2' />
+              <object-id>[Orders_FFBB6078FF8D4F11BD65A359657AED5B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Customer Name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Customer Name]</local-name>
+              <parent-name>[Orders_FFBB6078FF8D4F11BD65A359657AED5B]</parent-name>
+              <remote-alias>Customer Name</remote-alias>
+              <ordinal>6</ordinal>
+              <family>Orders</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1048</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RGB_S2' />
+              <object-id>[Orders_FFBB6078FF8D4F11BD65A359657AED5B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Segment</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Segment]</local-name>
+              <parent-name>[Orders_FFBB6078FF8D4F11BD65A359657AED5B]</parent-name>
+              <remote-alias>Segment</remote-alias>
+              <ordinal>7</ordinal>
+              <family>Orders</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RGB_S2' />
+              <object-id>[Orders_FFBB6078FF8D4F11BD65A359657AED5B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Country</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Country]</local-name>
+              <parent-name>[Orders_FFBB6078FF8D4F11BD65A359657AED5B]</parent-name>
+              <remote-alias>Country</remote-alias>
+              <ordinal>8</ordinal>
+              <family>Orders</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RGB_S2' />
+              <object-id>[Orders_FFBB6078FF8D4F11BD65A359657AED5B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>City</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[City]</local-name>
+              <parent-name>[Orders_FFBB6078FF8D4F11BD65A359657AED5B]</parent-name>
+              <remote-alias>City</remote-alias>
+              <ordinal>9</ordinal>
+              <family>Orders</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>500</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RGB_S2' />
+              <object-id>[Orders_FFBB6078FF8D4F11BD65A359657AED5B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>State</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[State]</local-name>
+              <parent-name>[Orders_FFBB6078FF8D4F11BD65A359657AED5B]</parent-name>
+              <remote-alias>State</remote-alias>
+              <ordinal>10</ordinal>
+              <family>Orders</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>51</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RGB_S2' />
+              <object-id>[Orders_FFBB6078FF8D4F11BD65A359657AED5B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Postal Code</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Postal Code]</local-name>
+              <parent-name>[Orders_FFBB6078FF8D4F11BD65A359657AED5B]</parent-name>
+              <remote-alias>Postal Code</remote-alias>
+              <ordinal>11</ordinal>
+              <family>Orders</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>610</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Orders_FFBB6078FF8D4F11BD65A359657AED5B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Region</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Region]</local-name>
+              <parent-name>[Orders_FFBB6078FF8D4F11BD65A359657AED5B]</parent-name>
+              <remote-alias>Region</remote-alias>
+              <ordinal>12</ordinal>
+              <family>Orders</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RGB_S2' />
+              <object-id>[Orders_FFBB6078FF8D4F11BD65A359657AED5B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Product ID</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Product ID]</local-name>
+              <parent-name>[Orders_FFBB6078FF8D4F11BD65A359657AED5B]</parent-name>
+              <remote-alias>Product ID</remote-alias>
+              <ordinal>13</ordinal>
+              <family>Orders</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2051</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RGB_S2' />
+              <object-id>[Orders_FFBB6078FF8D4F11BD65A359657AED5B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Category</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Category]</local-name>
+              <parent-name>[Orders_FFBB6078FF8D4F11BD65A359657AED5B]</parent-name>
+              <remote-alias>Category</remote-alias>
+              <ordinal>14</ordinal>
+              <family>Orders</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RGB_S2' />
+              <object-id>[Orders_FFBB6078FF8D4F11BD65A359657AED5B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Sub-Category</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Sub-Category]</local-name>
+              <parent-name>[Orders_FFBB6078FF8D4F11BD65A359657AED5B]</parent-name>
+              <remote-alias>Sub-Category</remote-alias>
+              <ordinal>15</ordinal>
+              <family>Orders</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>17</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RGB_S2' />
+              <object-id>[Orders_FFBB6078FF8D4F11BD65A359657AED5B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Product Name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Product Name]</local-name>
+              <parent-name>[Orders_FFBB6078FF8D4F11BD65A359657AED5B]</parent-name>
+              <remote-alias>Product Name</remote-alias>
+              <ordinal>16</ordinal>
+              <family>Orders</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2025</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RGB_S2' />
+              <object-id>[Orders_FFBB6078FF8D4F11BD65A359657AED5B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Sales</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Sales]</local-name>
+              <parent-name>[Orders_FFBB6078FF8D4F11BD65A359657AED5B]</parent-name>
+              <remote-alias>Sales</remote-alias>
+              <ordinal>17</ordinal>
+              <family>Orders</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3481</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Orders_FFBB6078FF8D4F11BD65A359657AED5B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Quantity</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Quantity]</local-name>
+              <parent-name>[Orders_FFBB6078FF8D4F11BD65A359657AED5B]</parent-name>
+              <remote-alias>Quantity</remote-alias>
+              <ordinal>18</ordinal>
+              <family>Orders</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>14</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Orders_FFBB6078FF8D4F11BD65A359657AED5B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Discount</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Discount]</local-name>
+              <parent-name>[Orders_FFBB6078FF8D4F11BD65A359657AED5B]</parent-name>
+              <remote-alias>Discount</remote-alias>
+              <ordinal>19</ordinal>
+              <family>Orders</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>11</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Orders_FFBB6078FF8D4F11BD65A359657AED5B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Profit</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Profit]</local-name>
+              <parent-name>[Orders_FFBB6078FF8D4F11BD65A359657AED5B]</parent-name>
+              <remote-alias>Profit</remote-alias>
+              <ordinal>20</ordinal>
+              <family>Orders</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3859</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Orders_FFBB6078FF8D4F11BD65A359657AED5B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Person</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Person]</local-name>
+              <parent-name>[People_208B103FA4284EFF98251968CD708DD8]</parent-name>
+              <remote-alias>Person</remote-alias>
+              <ordinal>21</ordinal>
+              <family>People</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RGB_S2' />
+              <object-id>[People_208B103FA4284EFF98251968CD708DD8]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Region</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Region (People)]</local-name>
+              <parent-name>[People_208B103FA4284EFF98251968CD708DD8]</parent-name>
+              <remote-alias>Region</remote-alias>
+              <ordinal>22</ordinal>
+              <family>People</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RGB_S2' />
+              <object-id>[People_208B103FA4284EFF98251968CD708DD8]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Returned</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Returned]</local-name>
+              <parent-name>[Returns_CD555AB0AA25496CBE3D85095361E163]</parent-name>
+              <remote-alias>Returned</remote-alias>
+              <ordinal>23</ordinal>
+              <family>Returns</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RGB_S2' />
+              <object-id>[Returns_CD555AB0AA25496CBE3D85095361E163]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Order ID</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Order ID (Returns)]</local-name>
+              <parent-name>[Returns_CD555AB0AA25496CBE3D85095361E163]</parent-name>
+              <remote-alias>Order ID</remote-alias>
+              <ordinal>24</ordinal>
+              <family>Returns</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>296</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RGB_S2' />
+              <object-id>[Returns_CD555AB0AA25496CBE3D85095361E163]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[Calculation_1622140344786583553]' palette='green_gold_10_0' type='interpolated' />
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United Kingdom&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <default-sorts>
+        <manual-sort column='[none:Forecast Indicator:nk]' direction='ASC'>
+          <dictionary>
+            <bucket>&quot;Actual&quot;</bucket>
+            <bucket>&quot;Estimate&quot;</bucket>
+          </dictionary>
+        </manual-sort>
+      </default-sorts>
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='Returned' />
+        <field-sort-custom-order field='Order ID (Returns)' />
+      </field-sort-info>
+      <object-graph>
+        <objects>
+          <object caption='Orders' id='Orders_FFBB6078FF8D4F11BD65A359657AED5B'>
+            <properties context=''>
+              <relation connection='excel-direct.17pq89w1cm9f041ba5kva08jtheh' name='Orders' table='[Orders$]' type='table'>
+                <columns gridOrigin='A1:U9995:no:A1:U9995:0' header='yes' outcome='6'>
+                  <column datatype='integer' name='Row ID' ordinal='0' />
+                  <column datatype='string' name='Order ID' ordinal='1' />
+                  <column datatype='date' name='Order Date' ordinal='2' />
+                  <column datatype='date' name='Ship Date' ordinal='3' />
+                  <column datatype='string' name='Ship Mode' ordinal='4' />
+                  <column datatype='string' name='Customer ID' ordinal='5' />
+                  <column datatype='string' name='Customer Name' ordinal='6' />
+                  <column datatype='string' name='Segment' ordinal='7' />
+                  <column datatype='string' name='Country' ordinal='8' />
+                  <column datatype='string' name='City' ordinal='9' />
+                  <column datatype='string' name='State' ordinal='10' />
+                  <column datatype='integer' name='Postal Code' ordinal='11' />
+                  <column datatype='string' name='Region' ordinal='12' />
+                  <column datatype='string' name='Product ID' ordinal='13' />
+                  <column datatype='string' name='Category' ordinal='14' />
+                  <column datatype='string' name='Sub-Category' ordinal='15' />
+                  <column datatype='string' name='Product Name' ordinal='16' />
+                  <column datatype='real' name='Sales' ordinal='17' />
+                  <column datatype='integer' name='Quantity' ordinal='18' />
+                  <column datatype='real' name='Discount' ordinal='19' />
+                  <column datatype='real' name='Profit' ordinal='20' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Orders_FFBB6078FF8D4F11BD65A359657AED5B' table='[Extract].[Orders_FFBB6078FF8D4F11BD65A359657AED5B]' type='table' />
+            </properties>
+          </object>
+          <object caption='People' id='People_208B103FA4284EFF98251968CD708DD8'>
+            <properties context=''>
+              <relation connection='excel-direct.17pq89w1cm9f041ba5kva08jtheh' name='People' table='[People$]' type='table'>
+                <columns gridOrigin='A1:B5:no:A1:B5:0' header='yes' outcome='6'>
+                  <column datatype='string' name='Person' ordinal='0' />
+                  <column datatype='string' name='Region' ordinal='1' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='People_208B103FA4284EFF98251968CD708DD8' table='[Extract].[People_208B103FA4284EFF98251968CD708DD8]' type='table' />
+            </properties>
+          </object>
+          <object caption='Returns' id='Returns_CD555AB0AA25496CBE3D85095361E163'>
+            <properties context=''>
+              <relation connection='excel-direct.17pq89w1cm9f041ba5kva08jtheh' name='Returns' table='[Returns$]' type='table'>
+                <columns gridOrigin='A1:B297:no:A1:B297:0' header='yes' outcome='6'>
+                  <column datatype='string' name='Returned' ordinal='0' />
+                  <column datatype='string' name='Order ID' ordinal='1' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Returns_CD555AB0AA25496CBE3D85095361E163' table='[Extract].[Returns_CD555AB0AA25496CBE3D85095361E163]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[Region]' />
+              <expression op='[Person]' />
+            </expression>
+            <first-end-point object-id='Orders_FFBB6078FF8D4F11BD65A359657AED5B' />
+            <second-end-point object-id='People_208B103FA4284EFF98251968CD708DD8' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[Customer ID]' />
+              <expression op='[Returned]' />
+            </expression>
+            <first-end-point object-id='Orders_FFBB6078FF8D4F11BD65A359657AED5B' />
+            <second-end-point object-id='Returns_CD555AB0AA25496CBE3D85095361E163' />
+          </relationship>
+        </relationships>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Orders+ (Superstore_Demo)' name='federated.0gbbj6s06kupmg1332wfq111fscw' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0gbbj6s06kupmg1332wfq111fscw'>
+            <column datatype='date' name='[Order Date]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[Region]' role='dimension' type='nominal' />
+            <column datatype='real' name='[Sales]' role='measure' type='quantitative' />
+            <column-instance column='[Region]' derivation='None' name='[none:Region:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Sales]' derivation='Sum' name='[sum:Sales:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Order Date]' derivation='Month-Trunc' name='[tmn:Order Date:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0gbbj6s06kupmg1332wfq111fscw].[none:Region:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0gbbj6s06kupmg1332wfq111fscw].[sum:Sales:qk]</rows>
+        <cols>[federated.0gbbj6s06kupmg1332wfq111fscw].[tmn:Order Date:qk]</cols>
+      </table>
+      <simple-id uuid='{0A6E8BAE-4D67-4486-9015-5C6CA0BDD2D7}' />
+    </worksheet>
+    <worksheet name='Sheet 2'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Orders+ (Superstore_Demo)' name='federated.0gbbj6s06kupmg1332wfq111fscw' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0gbbj6s06kupmg1332wfq111fscw'>
+            <column datatype='date' name='[Order Date]' role='dimension' type='ordinal' />
+            <column datatype='real' name='[Sales]' role='measure' type='quantitative' />
+            <column-instance column='[Sales]' derivation='Sum' forecast-column-base='[sum:Sales:qk]' forecast-column-type='forecast-value' name='[fVal:sum:Sales:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Forecast Indicator]' derivation='None' forecast-column-base='[Forecast Indicator]' forecast-column-type='forecast-indicator' name='[none:Forecast Indicator:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Sales]' derivation='Sum' name='[sum:Sales:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Order Date]' derivation='Month-Trunc' name='[tmn:Order Date:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0gbbj6s06kupmg1332wfq111fscw].[none:Forecast Indicator:nk]' />
+            </encodings>
+            <trendline degree='4' enable-confidence-bands='false' enable-instant-analytics='true' enabled='true' exclude-color='false' exclude-intercept='false' fit='polynomial' />
+          </pane>
+        </panes>
+        <rows>[federated.0gbbj6s06kupmg1332wfq111fscw].[fVal:sum:Sales:qk]</rows>
+        <cols>[federated.0gbbj6s06kupmg1332wfq111fscw].[tmn:Order Date:qk]</cols>
+        <show-full-range>
+          <column>[federated.0gbbj6s06kupmg1332wfq111fscw].[Sales (bin)]</column>
+        </show-full-range>
+        <forecast-specification auto-forecast-agg='true' band-confidence-level='95.000000' enabled='true' fill-type='fill-missing' ignore-last='1' model-type='auto-season' range-periods='Month-Trunc' range-size='6' range-type='next' show-prediction-bands='true' />
+      </table>
+      <simple-id uuid='{D8933F8C-678D-4A97-B67C-CC52D36B741B}' />
+    </worksheet>
+    <worksheet name='Sheet 3'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Orders+ (Superstore_Demo)' name='federated.0gbbj6s06kupmg1332wfq111fscw' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0gbbj6s06kupmg1332wfq111fscw'>
+            <column datatype='string' name='[City]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+            <column datatype='real' name='[Sales]' role='measure' type='quantitative' />
+            <column-instance column='[City]' derivation='None' name='[none:City:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Sales]' derivation='Sum' name='[sum:Sales:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0gbbj6s06kupmg1332wfq111fscw].[none:City:nk]'>
+            <groupfilter count='10' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='SUM([Sales])' function='order' user:ui-marker='order'>
+                <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Aberdeen&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Abilene&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Akron&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Albuquerque&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Alexandria&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Allen&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Allentown&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Altoona&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Amarillo&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Anaheim&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Andover&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Ann Arbor&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Antioch&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Apopka&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Apple Valley&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Appleton&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Arlington&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Arlington Heights&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Arvada&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Asheville&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Athens&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Atlanta&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Atlantic City&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Auburn&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Aurora&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Austin&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Avondale&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Bakersfield&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Baltimore&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Bangor&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Bartlett&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Bayonne&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Baytown&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Beaumont&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Bedford&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Belleville&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Bellevue&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Bellingham&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Bethlehem&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Beverly&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Billings&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Bloomington&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Boca Raton&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Boise&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Bolingbrook&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Bossier City&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Bowling Green&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Boynton Beach&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Bozeman&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Brentwood&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Bridgeton&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Bristol&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Broken Arrow&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Broomfield&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Brownsville&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Bryan&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Buffalo&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Buffalo Grove&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Bullhead City&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Burbank&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Burlington&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Caldwell&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Camarillo&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Cambridge&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Canton&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Carlsbad&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Carol Stream&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Carrollton&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Cary&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Cedar Hill&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Cedar Rapids&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Champaign&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Chandler&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Chapel Hill&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Charlotte&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Charlottesville&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Chattanooga&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Chesapeake&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Chester&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Cheyenne&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Chicago&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Chico&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Chula Vista&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Cincinnati&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Citrus Heights&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Clarksville&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Cleveland&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Clifton&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Clinton&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Clovis&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Coachella&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;College Station&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Colorado Springs&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Columbia&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Columbus&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Commerce City&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Concord&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Conroe&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Conway&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Coon Rapids&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Coppell&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Coral Gables&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Coral Springs&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Corpus Christi&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Costa Mesa&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Cottage Grove&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Covington&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Cranston&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Cuyahoga Falls&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Dallas&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Danbury&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Danville&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Davis&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Daytona Beach&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Dearborn&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Dearborn Heights&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Decatur&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Deer Park&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Delray Beach&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Deltona&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Denver&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Des Moines&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Des Plaines&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Detroit&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Dover&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Draper&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Dublin&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Dubuque&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Durham&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Eagan&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;East Orange&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;East Point&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Eau Claire&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Edinburg&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Edmond&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Edmonds&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;El Cajon&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;El Paso&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Elkhart&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Elmhurst&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Elyria&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Encinitas&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Englewood&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Escondido&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Eugene&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Evanston&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Everett&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Fairfield&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Fargo&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Farmington&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Fayetteville&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Florence&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Fort Collins&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Fort Lauderdale&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Fort Worth&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Frankfort&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Franklin&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Freeport&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Fremont&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Fresno&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Frisco&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Gaithersburg&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Garden City&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Garland&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Gastonia&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Georgetown&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Gilbert&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Gladstone&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Glendale&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Glenview&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Goldsboro&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Grand Island&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Grand Prairie&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Grand Rapids&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Grapevine&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Great Falls&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Greeley&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Green Bay&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Greensboro&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Greenville&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Greenwood&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Gresham&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Grove City&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Gulfport&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Hackensack&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Hagerstown&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Haltom City&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Hamilton&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Hampton&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Harlingen&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Harrisonburg&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Hattiesburg&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Helena&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Hempstead&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Henderson&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Hendersonville&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Hesperia&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Hialeah&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Hickory&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Highland Park&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Hillsboro&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Holland&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Hollywood&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Holyoke&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Homestead&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Hoover&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Hot Springs&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Houston&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Huntington Beach&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Huntsville&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Independence&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Indianapolis&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Inglewood&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Iowa City&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Irving&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Jackson&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Jacksonville&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Jamestown&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Jefferson City&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Johnson City&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Jonesboro&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Jupiter&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Keller&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Kenner&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Kenosha&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Kent&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Kirkwood&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Kissimmee&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Knoxville&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;La Crosse&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;La Mesa&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;La Porte&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;La Quinta&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Lafayette&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Laguna Niguel&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Lake Charles&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Lake Elsinore&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Lake Forest&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Lakeland&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Lakeville&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Lakewood&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Lancaster&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Lansing&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Laredo&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Las Cruces&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Las Vegas&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Laurel&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Lawrence&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Lawton&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Layton&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;League City&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Lebanon&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Lehi&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Leominster&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Lewiston&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Lincoln Park&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Linden&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Lindenhurst&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Little Rock&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Littleton&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Lodi&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Logan&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Long Beach&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Longmont&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Longview&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Lorain&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Los Angeles&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Louisville&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Loveland&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Lowell&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Lubbock&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Macon&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Madison&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Malden&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Manchester&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Manhattan&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Mansfield&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Manteca&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Maple Grove&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Margate&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Marietta&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Marion&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Marlborough&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Marysville&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Mason&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Mcallen&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Medford&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Medina&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Melbourne&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Memphis&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Mentor&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Meriden&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Meridian&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Mesa&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Mesquite&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Miami&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Middletown&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Midland&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Milford&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Milwaukee&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Minneapolis&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Miramar&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Mishawaka&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Mission Viejo&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Missoula&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Missouri City&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Mobile&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Modesto&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Monroe&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Montebello&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Montgomery&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Moorhead&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Moreno Valley&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Morgan Hill&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Morristown&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Mount Pleasant&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Mount Vernon&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Murfreesboro&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Murray&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Murrieta&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Muskogee&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Naperville&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Nashua&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Nashville&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;New Albany&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;New Bedford&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;New Brunswick&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;New Castle&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;New Rochelle&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;New York City&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Newark&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Newport News&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Niagara Falls&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Noblesville&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Norfolk&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Normal&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Norman&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;North Charleston&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;North Las Vegas&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;North Miami&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Norwich&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Oak Park&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Oakland&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Oceanside&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Odessa&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Oklahoma City&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Olathe&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Olympia&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Omaha&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Ontario&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Orange&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Orem&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Orland Park&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Orlando&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Ormond Beach&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Oswego&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Overland Park&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Owensboro&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Oxnard&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Palatine&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Palm Coast&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Park Ridge&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Parker&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Parma&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Pasadena&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Pasco&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Passaic&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Paterson&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Pearland&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Pembroke Pines&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Pensacola&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Peoria&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Perth Amboy&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Pharr&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Philadelphia&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Phoenix&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Pico Rivera&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Pine Bluff&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Plainfield&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Plano&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Plantation&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Pleasant Grove&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Pocatello&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Pomona&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Pompano Beach&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Port Arthur&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Port Orange&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Port Saint Lucie&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Portage&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Portland&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Providence&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Provo&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Pueblo&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Quincy&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Raleigh&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Rancho Cucamonga&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Rapid City&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Reading&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Redding&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Redlands&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Redmond&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Redondo Beach&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Redwood City&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Reno&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Renton&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Revere&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Richardson&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Richmond&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Rio Rancho&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Riverside&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Rochester&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Rochester Hills&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Rock Hill&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Rockford&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Rockville&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Rogers&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Rome&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Romeoville&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Roseville&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Roswell&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Round Rock&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Royal Oak&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Sacramento&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Saginaw&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Saint Charles&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Saint Cloud&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Saint Louis&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Saint Paul&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Saint Peters&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Saint Petersburg&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Salem&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Salinas&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Salt Lake City&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;San Angelo&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;San Antonio&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;San Bernardino&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;San Clemente&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;San Diego&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;San Francisco&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;San Gabriel&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;San Jose&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;San Luis Obispo&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;San Marcos&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;San Mateo&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Sandy Springs&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Sanford&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Santa Ana&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Santa Barbara&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Santa Clara&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Santa Fe&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Santa Maria&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Scottsdale&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Seattle&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Sheboygan&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Shelton&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Sierra Vista&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Sioux Falls&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Skokie&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Smyrna&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;South Bend&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Southaven&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Sparks&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Spokane&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Springdale&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Springfield&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Sterling Heights&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Stockton&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Suffolk&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Summerville&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Sunnyvale&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Superior&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Tallahassee&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Tamarac&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Tampa&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Taylor&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Temecula&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Tempe&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Texarkana&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Texas City&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;The Colony&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Thomasville&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Thornton&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Thousand Oaks&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Tigard&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Tinley Park&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Toledo&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Torrance&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Trenton&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Troy&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Tucson&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Tulsa&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Tuscaloosa&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Twin Falls&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Tyler&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Urbandale&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Utica&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Vacaville&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Vallejo&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Vancouver&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Vineland&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Virginia Beach&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Visalia&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Waco&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Warner Robins&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Warwick&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Washington&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Waterbury&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Waterloo&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Watertown&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Waukesha&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Wausau&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Waynesboro&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;West Allis&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;West Jordan&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;West Palm Beach&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Westfield&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Westland&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Westminster&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Wheeling&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Whittier&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Wichita&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Wilmington&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Wilson&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Woodbury&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Woodland&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Woodstock&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Woonsocket&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Yonkers&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;York&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Yucaipa&quot;' />
+                  <groupfilter function='member' level='[none:City:nk]' member='&quot;Yuma&quot;' />
+                </groupfilter>
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0gbbj6s06kupmg1332wfq111fscw].[none:City:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='on' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0gbbj6s06kupmg1332wfq111fscw].[none:City:nk]' />
+              <size column='[federated.0gbbj6s06kupmg1332wfq111fscw].[sum:Sales:qk]' />
+              <text column='[federated.0gbbj6s06kupmg1332wfq111fscw].[none:City:nk]' />
+              <text column='[federated.0gbbj6s06kupmg1332wfq111fscw].[sum:Sales:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{B9BDCCA0-806D-4324-B1C0-EA184D0F1793}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='2' param='[federated.0gbbj6s06kupmg1332wfq111fscw].[none:Region:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0gbbj6s06kupmg1332wfq111fscw].[none:City:nk]</field>
+            <field>[federated.0gbbj6s06kupmg1332wfq111fscw].[none:Region:nk]</field>
+            <field>[federated.0gbbj6s06kupmg1332wfq111fscw].[yr:Order Date:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{B3B4F655-F73A-45F5-94B4-A3C5C15DA923}' />
+    </window>
+    <window class='worksheet' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='144'>
+            <card pane-specification-id='0' param='[federated.0gbbj6s06kupmg1332wfq111fscw].[none:Forecast Indicator:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0gbbj6s06kupmg1332wfq111fscw].[none:Sales (bin):ok]</field>
+            <field>[federated.0gbbj6s06kupmg1332wfq111fscw].[yr:Order Date:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{F3317B8B-A985-40B0-8E32-F455B47C935E}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Sheet 3'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.0gbbj6s06kupmg1332wfq111fscw].[none:City:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.0gbbj6s06kupmg1332wfq111fscw].[none:City:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0gbbj6s06kupmg1332wfq111fscw].[none:Category:nk]</field>
+            <field>[federated.0gbbj6s06kupmg1332wfq111fscw].[none:City:nk]</field>
+            <field>[federated.0gbbj6s06kupmg1332wfq111fscw].[none:Sub-Category:nk]</field>
+            <field>[federated.0gbbj6s06kupmg1332wfq111fscw].[sum:Sales:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{440C94F3-97A0-45A0-ACCD-3020C5874834}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      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
+      XSKsuiZiCQAAAABJRU5ErkJggg==
+    </thumbnail>
+    <thumbnail height='192' name='Sheet 2' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Sheet 3' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
