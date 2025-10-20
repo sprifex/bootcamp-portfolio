@@ -18,7 +18,7 @@ This repository is created to showcase my projects and practice made during the 
 ## Structure
 | Repository | Topic | Description |
 |------------|-------|-------------|
-| [Azure and Fabric](Azure and Fabric) | Relational and Non-Relational Databases in virtual environment | Developing database structures and prompting queries using virtual environement. Exploring technologies of PaaS provided by Microsoft, and Resources to run data. |
+| [Azure and Fabric](Azure_and_Fabric) | Relational and Non-Relational Databases in virtual environment | Developing database structures and prompting queries using virtual environement. Exploring technologies of PaaS provided by Microsoft, and Resources to run data. |
 | Excel | Data Modeling and Visualisaion | Manipulating and visualising data, providing insights using formulas and functions for precise calculations. |
 | MySQL | Database Management and Query programming | Gathering insights of data using SQL language, calculating and sorting variables, joining tables and manipulating data |
 | Power BI | Designer | UK |
