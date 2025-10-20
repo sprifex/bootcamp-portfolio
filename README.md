@@ -19,8 +19,28 @@ This repository is created to showcase my projects and practice made during the 
 | Repository | Topic | Description |
 |------------|-------|-------------|
 | [Azure and Fabric](Azure_and_Fabric) | Relational and Non-Relational Databases in virtual environment | Developing database structures and prompting queries using virtual environement. Exploring technologies of PaaS provided by Microsoft, and Resources to run data. |
-| Excel | Data Modeling and Visualisaion | Manipulating and visualising data, providing insights using formulas and functions for precise calculations. |
-| MySQL | Database Management and Query programming | Gathering insights of data using SQL language, calculating and sorting variables, joining tables and manipulating data |
-| Power BI | Designer | UK |
-| Python | Designer | UK |
-| Tableau | Designer | UK |
+| [Excel](Excel) | Data Modeling and Visualisaion | Manipulating and visualising data, providing insights using formulas and functions for precise calculations. |
+| [MySQL](MySQL) | Database Management and Query programming | Gathering insights of data using SQL language, calculating and sorting variables, joining tables and manipulating data |
+| [Power BI](Power_BI) | Data visualisation | Manipulating and cleaning data, creating data visualisations to be published, creating interactive reports. |
+| [Python](Python) | Programming commands for data manipulation. Pandas and NumPy | Using Pandas to reading datasets, manipulating data, gathering insights with use of custom variables, functions, and commands to produce values for data analysis. Creating simple data visualisations using Seaborn. Performing optimised mathematical operations on large arrays using NumPy. |
+| [Tableau](Tableau) | Data visualisation | Creating advanced data visualisations with use of datasets, aggregate functions, custom functions. Creating dashborads for presentations. |
+
+## Tools and Software Technologies used
+  - Excel
+  - Tableau
+  - Power BI
+  - MySQL
+  - Microsoft Azure
+      - Relational Data
+      - Non-relational Data
+      - Data Analytics
+  - Miscrosoft Fabric
+      - Eventstream
+      - KQL Database
+      - Lakehouse
+      - Real-Time Dashboard
+  - Python
+      - Pandas
+      - Numpy
+      - Seaborn
+      - Matplotlib
