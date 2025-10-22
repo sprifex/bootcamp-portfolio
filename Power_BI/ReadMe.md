@@ -1,0 +1,2 @@
+# Power BI. Data cleaning, visualisation, and presentation cleaning, visualisation, and presentation
+As part of my Data Analyst bootcamp programme, I completed a structured series of virtual laboratory works using Microsoft Power BI Desktop, progressing from fundamental data operations to creating sophisticated interactive dashboards. This experience provided me with practical skills in the complete business intelligence workflow, from raw data ingestion to final report deployment. 
